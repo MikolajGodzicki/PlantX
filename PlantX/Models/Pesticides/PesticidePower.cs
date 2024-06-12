@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlantX.Model.Pesticides
+namespace PlantX.Models.Pesticides
 {
     [Serializable]
     internal class PesticidePower

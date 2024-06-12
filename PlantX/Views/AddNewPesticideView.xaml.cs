@@ -13,13 +13,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PlantX.View {
-    /// <summary>
-    /// Logika interakcji dla klasy PesticidesListPage.xaml
-    /// </summary>
-    public partial class PesticidesListPage : Page {
-        public PesticidesListPage() {
-            InitializeComponent();
-        }
-    }
+namespace PlantX.Views {
+	/// <summary>
+	/// Logika interakcji dla klasy AddNewPesticideView.xaml
+	/// </summary>
+	public partial class AddNewPesticideView : UserControl {
+		public AddNewPesticideView() {
+			InitializeComponent();
+		}
+	}
 }

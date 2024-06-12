@@ -1,6 +1,5 @@
-﻿using PlantX.Model.Pesticides;
+﻿using PlantX.Models.Pesticides;
 using PlantX.Utils;
-using PlantX.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,11 +10,11 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Navigation;
 
-namespace PlantX.ViewModel {
-    internal class PesticideListViewModel : INotifyPropertyChanged {
+namespace PlantX.ViewModels {
+    internal class PesticidesListViewModel : ViewModelBase {
         private ObservableCollection<Pesticide> pesticides { get; set; }
 
-        public PesticideListViewModel() {
+        public PesticidesListViewModel() {
             pesticides = new ObservableCollection<Pesticide>() {
                 new Pesticide() { Name = "Signum", Power = new PesticidePower() {
                     Ares = 10,
@@ -45,13 +44,6 @@ namespace PlantX.ViewModel {
         public ICommand AddPesticideCommand => new RelayCommand(AddPesticide);
 
         private void AddPesticide() {
-            NavigationServiceProvider.Navigate(new AddNewPesticidePage());
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged(string propertyName) {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

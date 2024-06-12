@@ -1,7 +1,6 @@
 ﻿using PlantX.Utils;
-using PlantX.View;
-using PlantX.ViewModel;
 using System.Text;
+using PlantX.Views;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,8 +18,6 @@ namespace PlantX {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
-            NavigationServiceProvider.Init(MainFrame);
-            DataContext = new MainWindowViewModel();
         }
     }
 }
