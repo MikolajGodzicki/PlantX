@@ -3,47 +3,53 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+        xmlns:local="clr-namespace:PlantX.Controls"
         mc:Ignorable="d"
         Title="MainWindow" 
+        ResizeMode="NoResize"
         Height="600" 
         Width="920"
-        Background="Transparent">
-    <Border
         Background="#FFFFFF">
+    <Border>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="225"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="70"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
             <TextBlock Text="PlantX"
+                        FontSize="24"
                        Style="{StaticResource MenuTitleTheme}"/>
-            
+
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
-                    <RowDefinition/>
+                    <RowDefinition Height="1*"/>
                     <RowDefinition Height="40"/>
-                    <RowDefinition/>
+                    <RowDefinition Height="2*"/>
                 </Grid.RowDefinitions>
 
                 <TextBlock Text="Informacje"
                        Style="{StaticResource MenuTitleTheme}"/>
 
                 <StackPanel Grid.Row="1">
-                    <RadioButton Content="Rośliny"
-                             Style="{StaticResource MenuButtonTheme}"/>
-                    
-                    <RadioButton Content="Obszary polne"
-                             Style="{StaticResource MenuButtonTheme}"/>
-                    
-                    <RadioButton Content="Pestycydy"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                    <local:MenuButtonControl Content="Rośliny"
+                                             IconSource="/Icons/plant.png"
+                                             Style="{StaticResource MenuButtonTheme}"/>
+
+                    <local:MenuButtonControl Content="Obszary polne"
+                                             IconSource="/Icons/field.png"
+                                             Style="{StaticResource MenuButtonTheme}"/>
+
+                    <local:MenuButtonControl Content="Pestycydy"
+                                             IconSource="/Icons/pesticide.png"
+                                             Style="{StaticResource MenuButtonTheme}"/>
                 </StackPanel>
 
 
@@ -52,13 +58,21 @@
                        Grid.Row="2"/>
 
                 <StackPanel Grid.Row="3">
-                    <RadioButton Content="Stwórz raport"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                    <local:MenuButtonControl Content="Stwórz raport"
+                         IconSource="/Icons/diagram.png"
+                         Style="{StaticResource MenuButtonTheme}"/>
 
-                    <RadioButton Content="Wszystkie raporty"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                    <local:MenuButtonControl Content="Wszystkie raporty"
+                         IconSource="/Icons/raport.png"
+                         Style="{StaticResource MenuButtonTheme}"/>
                 </StackPanel>
             </Grid>
+            
+            <Border VerticalAlignment="Stretch" 
+                    HorizontalAlignment="Right" 
+                    Width="1" 
+                    Grid.RowSpan="2" 
+                    Background="#E0E0E0"/>
         </Grid>
     </Border>
 </Window>
