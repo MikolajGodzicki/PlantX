@@ -5,74 +5,100 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         xmlns:local="clr-namespace:PlantX.Controls"
+        xmlns:vm="clr-namespace:PlantX.MVVM.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" 
         ResizeMode="NoResize"
         Height="600" 
         Width="920"
         Background="#FFFFFF">
-    <Border>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="225"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+    <Window.DataContext>
+        <vm:MainViewModel/>     
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="225"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="PlantX"
+                       FontSize="24"
+                       Style="{StaticResource MenuTitleTheme}"/>
+
+        <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="70"/>
-                <RowDefinition/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="PlantX"
-                        FontSize="24"
+            <TextBlock Text="Informacje"
                        Style="{StaticResource MenuTitleTheme}"/>
 
-            <Grid Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="1*"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="2*"/>
-                </Grid.RowDefinitions>
-
-                <TextBlock Text="Informacje"
-                       Style="{StaticResource MenuTitleTheme}"/>
-
-                <StackPanel Grid.Row="1">
-                    <local:MenuButtonControl Content="Rośliny"
+            <StackPanel Grid.Row="1">
+                <local:MenuButtonControl Content="Rośliny"
                                              IconSource="/Icons/plant.png"
                                              Style="{StaticResource MenuButtonTheme}"/>
 
-                    <local:MenuButtonControl Content="Obszary polne"
+                <local:MenuButtonControl Content="Obszary polne"
                                              IconSource="/Icons/field.png"
                                              Style="{StaticResource MenuButtonTheme}"/>
 
-                    <local:MenuButtonControl Content="Pestycydy"
+                <local:MenuButtonControl Content="Pestycydy"
                                              IconSource="/Icons/pesticide.png"
                                              Style="{StaticResource MenuButtonTheme}"/>
-                </StackPanel>
+            </StackPanel>
 
 
-                <TextBlock Text="Raporty"
+            <TextBlock Text="Raporty"
                        Style="{StaticResource MenuTitleTheme}"
                        Grid.Row="2"/>
 
-                <StackPanel Grid.Row="3">
-                    <local:MenuButtonControl Content="Stwórz raport"
+            <StackPanel Grid.Row="3">
+                <local:MenuButtonControl Content="Stwórz raport"
                          IconSource="/Icons/diagram.png"
                          Style="{StaticResource MenuButtonTheme}"/>
 
-                    <local:MenuButtonControl Content="Wszystkie raporty"
+                <local:MenuButtonControl Content="Wszystkie raporty"
                          IconSource="/Icons/raport.png"
                          Style="{StaticResource MenuButtonTheme}"/>
-                </StackPanel>
-            </Grid>
-            
-            <Border VerticalAlignment="Stretch" 
+            </StackPanel>
+        </Grid>
+
+        <Border VerticalAlignment="Stretch" 
                     HorizontalAlignment="Right" 
                     Width="1" 
                     Grid.RowSpan="2" 
                     Background="#E0E0E0"/>
-        </Grid>
-    </Border>
+        
+        <Border CornerRadius="10" 
+                Grid.Column="1"
+                Height="40"
+                Background="#F3F3F3"
+                Margin="50,0,0,0"
+                HorizontalAlignment="Left">
+
+            <StackPanel  Orientation="Horizontal">
+                <RadioButton Content="Utwórz"
+                         Style="{StaticResource MainViewButton}"
+                             Margin="5,0,5,0"
+                             Height="30"/>
+                <RadioButton Content="Edytuj"
+                         Style="{StaticResource MainViewButton}"
+                             Margin="0,0,5,0"
+                             Height="30"/>
+            </StackPanel>
+        </Border>
+
+        <ContentControl Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="20"
+                        Content="{Binding CurrentView}"/>
+    </Grid>
 </Window>

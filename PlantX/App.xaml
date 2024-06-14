@@ -2,13 +2,22 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:PlantX"
+             xmlns:vm="clr-namespace:PlantX.MVVM.ViewModels"
+             xmlns:view="clr-namespace:PlantX.MVVM.Views"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/MenuTitleTheme.xaml"/>
+                <ResourceDictionary Source="Theme/MainViewButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/FormInputTheme.xaml"/>
+                <ResourceDictionary Source="Theme/FormButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type vm:PlantsCreatorViewModel}">
+                <view:PlantsCreatorView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
