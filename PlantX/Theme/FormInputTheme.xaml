@@ -6,9 +6,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
                     <Border CornerRadius="10"
-                            Background="#E0E0E0"
-                            Width="200"
-                            Height="40">
+                            Background="#E0E0E0">
                         <Grid>
                             <Rectangle StrokeThickness="2"/>
                             <TextBox Margin="2"
@@ -34,7 +32,7 @@
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        Margin="10,0,0,0"
-                                       Foreground="Black"
+                                       Foreground="#999999"
                                        FontSize="16"
                                        FontWeight="Medium"
                                        FontFamily="/Fonts/#Inter"
@@ -42,7 +40,7 @@
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Text, ElementName=Input}">
+                                            <DataTrigger Binding="{Binding Text, ElementName=Input}" Value="">
                                                 <Setter Property="Visibility" Value="Visible"/>
                                             </DataTrigger>
                                         </Style.Triggers>

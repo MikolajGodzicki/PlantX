@@ -20,7 +20,7 @@
             <ColumnDefinition Width="225"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
+ 
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition/>
@@ -42,15 +42,19 @@
                        Style="{StaticResource MenuTitleTheme}"/>
 
             <StackPanel Grid.Row="1">
-                <local:MenuButtonControl Content="Rośliny"
+                <local:MenuButtonControl Command="{Binding PlantsCommand}"
+                                             IsChecked="True"
+                                             Content="Rośliny"
                                              IconSource="/Icons/plant.png"
                                              Style="{StaticResource MenuButtonTheme}"/>
 
-                <local:MenuButtonControl Content="Obszary polne"
+                <local:MenuButtonControl Command="{Binding FieldsCommand}"
+                                             Content="Obszary polne"
                                              IconSource="/Icons/field.png"
                                              Style="{StaticResource MenuButtonTheme}"/>
 
-                <local:MenuButtonControl Content="Pestycydy"
+                <local:MenuButtonControl Command="{Binding PesticidesCommand}"
+                                             Content="Pestycydy"
                                              IconSource="/Icons/pesticide.png"
                                              Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
@@ -61,13 +65,15 @@
                        Grid.Row="2"/>
 
             <StackPanel Grid.Row="3">
-                <local:MenuButtonControl Content="Stwórz raport"
-                         IconSource="/Icons/diagram.png"
-                         Style="{StaticResource MenuButtonTheme}"/>
+                <local:MenuButtonControl Command="{Binding RaportCreatorCommand}"
+                                             Content="Stwórz raport"
+                                             IconSource="/Icons/diagram.png"
+                                             Style="{StaticResource MenuButtonTheme}"/>
 
-                <local:MenuButtonControl Content="Wszystkie raporty"
-                         IconSource="/Icons/raport.png"
-                         Style="{StaticResource MenuButtonTheme}"/>
+                <local:MenuButtonControl Command="{Binding ShowRaportsCommand}"
+                                             Content="Wszystkie raporty"
+                                             IconSource="/Icons/raport.png"
+                                             Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
         </Grid>
 
@@ -86,13 +92,14 @@
 
             <StackPanel  Orientation="Horizontal">
                 <RadioButton Content="Utwórz"
-                         Style="{StaticResource MainViewButton}"
                              Margin="5,0,5,0"
-                             Height="30"/>
+                             Height="30"
+                             IsChecked="True"
+                             Style="{StaticResource MainViewButton}"/>
                 <RadioButton Content="Edytuj"
-                         Style="{StaticResource MainViewButton}"
                              Margin="0,0,5,0"
-                             Height="30"/>
+                             Height="30"
+                             Style="{StaticResource MainViewButton}"/>
             </StackPanel>
         </Border>
 

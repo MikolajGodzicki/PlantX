@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlantX.MVVM.ViewModels {
-	internal class PlantsCreatorViewModel : ViewModelBase {
+namespace PlantX.MVVM.ViewModels.Plants {
+	class PlantsCreatorViewModel : ViewModelBase {
         public PlantsCreatorViewModel()
         {
             

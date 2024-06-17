@@ -13,13 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PlantX.MVVM.Views {
-	/// <summary>
-	/// Logika interakcji dla klasy PlantsEditorView.xaml
-	/// </summary>
-	public partial class PlantsEditorView : UserControl {
-		public PlantsEditorView() {
-			InitializeComponent();
-		}
-	}
+namespace PlantX.MVVM.Views.Fields
+{
+    /// <summary>
+    /// Logika interakcji dla klasy FieldsCreatorView.xaml
+    /// </summary>
+    public partial class FieldsCreatorView : UserControl
+    {
+        public FieldsCreatorView()
+        {
+            InitializeComponent();
+        }
+    }
 }

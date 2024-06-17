@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PlantX.MVVM.Views {
+namespace PlantX.MVVM.Views.Plants {
 	/// <summary>
 	/// Logika interakcji dla klasy PlantsCreatorView.xaml
 	/// </summary>
