@@ -8,15 +8,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace PlantX.MVVM.ViewModels {
 	internal class MainViewModel : ViewModelBase {
-		private PlantsCreatorViewModel plantsCreatorVM { get; set; }
-		private PlantsEditorViewModel plantsEditorVM { get; set; }
-		private FieldsCreatorViewModel fieldsCreatorVM { get; set; }
-		private FieldsEditorViewModel fieldsEditorVM { get; set; }
-		private PesticidesCreatorViewModel pesticidesCreatorVM { get; set; }
-		private PesticidesEditorViewModel pesticidesEditorVM { get; set; }
+		private PlantsViewModel plantsVM { get; set; }
+		private FieldsViewModel fieldsVM { get; set; }
+		private PesticidesViewModel pesticidesVM { get; set; }
 		private RaportCreatorViewModel raportCreatorVM { get; set; }
 		private ShowRaportsViewModel showRaportsVM { get; set; }
 
@@ -27,16 +25,15 @@ namespace PlantX.MVVM.ViewModels {
 		public RelayCommand RaportCreatorCommand { get; set; }
 		public RelayCommand ShowRaportsCommand { get; set; }
 
-
 		private object currentView;
 
 		public object CurrentView {
-			get { return currentView; }
-			set { currentView = value;
+			get => currentView; 
+			set { 
+				currentView = value;
 				OnPropertyChanged();
 			}
 		}
-
 
 		public MainViewModel()
         {
@@ -46,39 +43,43 @@ namespace PlantX.MVVM.ViewModels {
 		}
 
 		private void InitializeViewModels() {
-			plantsCreatorVM = new PlantsCreatorViewModel();
-			plantsEditorVM = new PlantsEditorViewModel();
-			fieldsCreatorVM = new FieldsCreatorViewModel();
-			fieldsEditorVM = new FieldsEditorViewModel();
-			pesticidesCreatorVM = new PesticidesCreatorViewModel();
-			pesticidesEditorVM = new PesticidesEditorViewModel();
+			plantsVM = new PlantsViewModel();
+			fieldsVM = new FieldsViewModel();
+			pesticidesVM = new PesticidesViewModel();
 			raportCreatorVM = new RaportCreatorViewModel();
 			showRaportsVM = new ShowRaportsViewModel();
 
-			CurrentView = plantsCreatorVM;
+			SetCurrentViewModel(plantsVM);
 		}
 		
 		private void InitializeCommands() {
 			PlantsCommand = new RelayCommand(e => {
-				CurrentView = plantsCreatorVM;
+				SetCurrentViewModel(plantsVM);
 			});
 
 			FieldsCommand = new RelayCommand(e => {
-				CurrentView = fieldsCreatorVM;
+				SetCurrentViewModel(fieldsVM);
 			});
 
 			PesticidesCommand = new RelayCommand(e => {
-				CurrentView = pesticidesCreatorVM;
+				SetCurrentViewModel(pesticidesVM);
 			});
+
 
 
 			RaportCreatorCommand = new RelayCommand(e => {
-				CurrentView = raportCreatorVM;
+				SetCurrentViewModel(raportCreatorVM);
 			});
 
 			ShowRaportsCommand = new RelayCommand(e => {
-				CurrentView = showRaportsVM;
+				SetCurrentViewModel(showRaportsVM);
 			});
 		}
-    }
+
+
+		private void SetCurrentViewModel(object viewModel) {
+			CurrentView = viewModel;
+		}
+
+	}
 }

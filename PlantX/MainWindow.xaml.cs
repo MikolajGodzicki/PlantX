@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using PlantX.MVVM.ViewModels;
+using System.Windows;
 
 namespace PlantX {
 	/// <summary>

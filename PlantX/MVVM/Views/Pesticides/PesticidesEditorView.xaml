@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock>Pesticides</TextBlock>
+        <TextBlock>Pesticides editor</TextBlock>
             
     </Grid>
 </UserControl>

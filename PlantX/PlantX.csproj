@@ -13,6 +13,10 @@
     <None Remove="Fonts\Inter-SemiBold.ttf" />
     <None Remove="Icons\diagram.png" />
     <None Remove="Icons\field.png" />
+    <None Remove="Icons\Logo\Logo.png" />
+    <None Remove="Icons\Logo\Logo_1.png" />
+    <None Remove="Icons\Logo\Logo_2.png" />
+    <None Remove="Icons\Logo\Logo_3.png" />
     <None Remove="Icons\pesticide.png" />
     <None Remove="Icons\plant.png" />
     <None Remove="Icons\raport.png" />
@@ -29,6 +33,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icons\field.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\Logo\Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\Logo\Logo_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\Logo\Logo_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\Logo\Logo_3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icons\pesticide.png">

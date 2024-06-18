@@ -8,27 +8,32 @@
         xmlns:vm="clr-namespace:PlantX.MVVM.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" 
-        ResizeMode="NoResize"
         Height="600" 
-        Width="920"
+        Width="1020"
         Background="#FFFFFF">
     <Window.DataContext>
-        <vm:MainViewModel/>     
+        <vm:MainViewModel />
     </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="225"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
- 
+
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="PlantX"
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="PlantX"
                        FontSize="24"
                        Style="{StaticResource MenuTitleTheme}"/>
+            <Image Source="/Icons/Logo/Logo.png" 
+                   Width="64" 
+                   Height="64"
+                   Margin="40,0,0,0"/>
+        </StackPanel>
 
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -82,29 +87,10 @@
                     Width="1" 
                     Grid.RowSpan="2" 
                     Background="#E0E0E0"/>
-        
-        <Border CornerRadius="10" 
-                Grid.Column="1"
-                Height="40"
-                Background="#F3F3F3"
-                Margin="50,0,0,0"
-                HorizontalAlignment="Left">
 
-            <StackPanel  Orientation="Horizontal">
-                <RadioButton Content="Utwórz"
-                             Margin="5,0,5,0"
-                             Height="30"
-                             IsChecked="True"
-                             Style="{StaticResource MainViewButton}"/>
-                <RadioButton Content="Edytuj"
-                             Margin="0,0,5,0"
-                             Height="30"
-                             Style="{StaticResource MainViewButton}"/>
-            </StackPanel>
-        </Border>
-
-        <ContentControl Grid.Row="1"
+        <ContentControl Grid.Row="0"
                         Grid.Column="1"
+                        Grid.RowSpan="2"
                         Margin="20"
                         Content="{Binding CurrentView}"/>
     </Grid>

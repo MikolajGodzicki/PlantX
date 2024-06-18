@@ -11,7 +11,9 @@
              xmlns:view_plants="clr-namespace:PlantX.MVVM.Views.Plants"
              xmlns:view_fields="clr-namespace:PlantX.MVVM.Views.Fields"
              xmlns:view_pesticides="clr-namespace:PlantX.MVVM.Views.Pesticides"
-             xmlns:view_raports="clr-namespace:PlantX.MVVM.Views.Raports"
+             xmlns:view_raports="clr-namespace:PlantX.MVVM.Views.Raports" 
+             
+             xmlns:converters="clr-namespace:PlantX.Converters"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -23,11 +25,18 @@
                 <ResourceDictionary Source="Theme/FormButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
+            <DataTemplate DataType="{x:Type vm_plants:PlantsViewModel}">
+                <view_plants:PlantsView/>
+            </DataTemplate>
             <DataTemplate DataType="{x:Type vm_plants:PlantsCreatorViewModel}">
                 <view_plants:PlantsCreatorView/>
             </DataTemplate>
             <DataTemplate DataType="{x:Type vm_plants:PlantsEditorViewModel}">
                 <view_plants:PlantsEditorView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm_fields:FieldsViewModel}">
+                <view_fields:FieldsView/>
             </DataTemplate>
             <DataTemplate DataType="{x:Type vm_fields:FieldsCreatorViewModel}">
                 <view_fields:FieldsCreatorView/>
@@ -35,18 +44,25 @@
             <DataTemplate DataType="{x:Type vm_fields:FieldsEditorViewModel}">
                 <view_fields:FieldsEditorView/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm_pesticides:PesticidesViewModel}">
+                <view_pesticides:PesticidesView/>
+            </DataTemplate>
             <DataTemplate DataType="{x:Type vm_pesticides:PesticidesCreatorViewModel}">
                 <view_pesticides:PesticidesCreatorView/>
             </DataTemplate>
             <DataTemplate DataType="{x:Type vm_pesticides:PesticidesEditorViewModel}">
                 <view_pesticides:PesticidesEditorView/>
             </DataTemplate>
+            
             <DataTemplate DataType="{x:Type vm_raports:RaportCreatorViewModel}">
                 <view_raports:RaportCreatorView/>
             </DataTemplate>
             <DataTemplate DataType="{x:Type vm_raports:ShowRaportsViewModel}">
                 <view_raports:ShowRaportsView/>
             </DataTemplate>
+
+            <converters:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

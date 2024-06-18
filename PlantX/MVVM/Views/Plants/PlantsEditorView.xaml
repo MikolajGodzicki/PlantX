@@ -6,7 +6,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock>Plants</TextBlock>
+        <TextBlock>Plants editor</TextBlock>
             
     </Grid>
 </UserControl>
