@@ -64,7 +64,6 @@
                                              Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
 
-
             <TextBlock Text="Raporty"
                        Style="{StaticResource MenuTitleTheme}"
                        Grid.Row="2"/>

@@ -15,13 +15,12 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Dostępne rośliny"
                                     Binding="{Binding Name}" />
-                <DataGridTemplateColumn CellTemplate="{StaticResource DataGridEditButtonCell}" />
             </DataGrid.Columns>
 
         </DataGrid>
 
         <TextBlock Text="Nazwa rośliny"
-                   Margin="30,5,5,10"
+                   Margin="30,30,5,10"
                    FontSize="16"
                    FontWeight="Medium"
                    FontFamily="/Fonts/#Inter" />
@@ -31,7 +30,7 @@
                                 VerticalContentAlignment="Center"
                                 Placeholder="Koper"
                                 HorizontalAlignment="Left"
-                                Margin="30,5,5,50"
+                                Margin="30,0,5,50"
                                 Style="{StaticResource FormInput}"
                                 Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
 
