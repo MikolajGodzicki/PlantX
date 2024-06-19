@@ -32,6 +32,5 @@
 
             <Setter Property="Height" Value="28"/>
         </Style.Setters>
-
     </Style>
 </ResourceDictionary>

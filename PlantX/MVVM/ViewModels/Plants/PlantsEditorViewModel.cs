@@ -1,4 +1,5 @@
-﻿using PlantX.MVVM.Models.Plants;
+﻿using PlantX.Data;
+using PlantX.MVVM.Models.Plants;
 using PlantX.Utils;
 using System;
 using System.Collections.Generic;
@@ -43,7 +44,7 @@ namespace PlantX.MVVM.ViewModels.Plants
 		public RelayCommand ChangePlantNameCommand { get; set; }
 
 		public PlantsEditorViewModel() {
-			AvailablePlants = [new Plant("Koper"), new Plant("Natka")];
+			AvailablePlants = PlantX_API.AvailablePlants;
 
 			ChangePlantNameCommand = new RelayCommand(e => {
 				ChangePlantName();

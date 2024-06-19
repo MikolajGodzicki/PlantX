@@ -19,8 +19,12 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/DataGrid/DataGridEditButtonTheme.xaml"/>
-                <ResourceDictionary Source="Theme/DataGrid/DataGridEditButtonCellTemplate.xaml"/>
-                    
+                <ResourceDictionary Source="Theme/DataGrid/DataGridEditButtonCellTemplate.xaml" />
+                <ResourceDictionary Source="Theme/DataGrid/DataGridModernTheme.xaml" />
+                <ResourceDictionary Source="Theme/DataGrid/DataGridCellModernTheme.xaml" />
+                <ResourceDictionary Source="Theme/DataGrid/DataGridRowModernTheme.xaml" />
+                <ResourceDictionary Source="Theme/DataGrid/DataGridColumnHeaderModernTheme.xaml" />
+
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/MenuTitleTheme.xaml"/>
                 <ResourceDictionary Source="Theme/MainViewButtonTheme.xaml"/>

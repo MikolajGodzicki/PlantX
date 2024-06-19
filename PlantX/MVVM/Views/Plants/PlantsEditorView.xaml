@@ -7,38 +7,54 @@
              mc:Ignorable="d"
              d:DesignHeight="450"
              d:DesignWidth="800">
-    <StackPanel>
-        <DataGrid AutoGenerateColumns="False"
-                  ItemsSource="{Binding AvailablePlants}"
-                  IsReadOnly="True"
-                  SelectedItem="{Binding SelectedPlant}">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Dostępne rośliny"
-                                    Binding="{Binding Name}" />
-            </DataGrid.Columns>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
 
-        </DataGrid>
+        <Border BorderThickness="2"
+                BorderBrush="#E0E0E0"
+                CornerRadius="5"
+                Grid.Row="0">
+            <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderModern}"
+                      RowStyle="{DynamicResource DataGridRowModern}"
+                      CellStyle="{DynamicResource DataGridCellModern}"
+                      Style="{DynamicResource DataGridModern}"
+                      AutoGenerateColumns="False"
+                      ItemsSource="{Binding AvailablePlants}"
+                      IsReadOnly="True"
+                      SelectedItem="{Binding SelectedPlant}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Dostępne rośliny"
+                                        Binding="{Binding Name}" />
+                </DataGrid.Columns>
 
-        <TextBlock Text="Nazwa rośliny"
-                   Margin="30,30,5,10"
-                   FontSize="16"
-                   FontWeight="Medium"
-                   FontFamily="/Fonts/#Inter" />
+            </DataGrid>
+        </Border>
+        
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Nazwa rośliny"
+                       Margin="30,30,5,10"
+                       FontSize="16"
+                       FontWeight="Medium"
+                       FontFamily="/Fonts/#Inter" />
 
-        <local:FormInputControl Width="250"
-                                Height="40"
-                                VerticalContentAlignment="Center"
-                                Placeholder="Koper"
-                                HorizontalAlignment="Left"
-                                Margin="30,0,5,50"
-                                Style="{StaticResource FormInput}"
-                                Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
+            <local:FormInputControl Width="250"
+                                    Height="40"
+                                    VerticalContentAlignment="Center"
+                                    Placeholder="Koper"
+                                    HorizontalAlignment="Left"
+                                    Margin="30,0,5,50"
+                                    Style="{StaticResource FormInput}"
+                                    Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
 
-        <Button Width="150"
-                HorizontalAlignment="Left"
-                Content="Zmień nazwę"
-                Margin="30,0,0,0"
-                Command="{Binding ChangePlantNameCommand}"
-                Style="{StaticResource FormButton}" />
-    </StackPanel>
+            <Button Width="150"
+                    HorizontalAlignment="Left"
+                    Content="Zmień nazwę"
+                    Margin="30,0,0,0"
+                    Command="{Binding ChangePlantNameCommand}"
+                    Style="{StaticResource FormButton}" />
+        </StackPanel>
+    </Grid>
 </UserControl>

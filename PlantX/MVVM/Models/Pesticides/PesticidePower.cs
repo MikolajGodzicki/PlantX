@@ -1,6 +1,6 @@
 ﻿namespace PlantX.MVVM.Models.Pesticides {
 	[Serializable]
-	internal class PesticidePower {
+	public class PesticidePower {
 		/// <summary>
 		/// Defines how many liters or kilograms are used to spray on defined Ares
 		/// </summary>

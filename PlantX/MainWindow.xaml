@@ -7,8 +7,9 @@
         xmlns:local="clr-namespace:PlantX.Controls"
         xmlns:vm="clr-namespace:PlantX.MVVM.ViewModels"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="MainWindow" 
-        Height="600" 
+        Height="700" 
         Width="1020"
         Background="#FFFFFF">
     <Window.DataContext>

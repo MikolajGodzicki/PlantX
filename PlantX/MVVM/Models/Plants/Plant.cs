@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PlantX.MVVM.Models.Plants {
-	class Plant : NotifyPropertyBase {
+	public class Plant : NotifyPropertyBase {
 		public Guid Id { get; set; }
 
 
