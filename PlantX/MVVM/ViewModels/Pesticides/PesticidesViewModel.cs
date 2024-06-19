@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PlantX.MVVM.ViewModels.Pesticides
 {
-    class PesticidesViewModel : ViewModelBase {
+    class PesticidesViewModel : NotifyPropertyBase {
 		private PesticidesCreatorViewModel creatorVM { get; set; }
 		private PesticidesEditorViewModel editorVM { get; set; }
 

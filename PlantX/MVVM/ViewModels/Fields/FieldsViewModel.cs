@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PlantX.MVVM.ViewModels.Fields
 {
-    class FieldsViewModel : ViewModelBase {
+    class FieldsViewModel : NotifyPropertyBase {
 		private FieldsCreatorViewModel creatorVM { get; set; }
 		private FieldsEditorViewModel editorVM { get; set; }
 

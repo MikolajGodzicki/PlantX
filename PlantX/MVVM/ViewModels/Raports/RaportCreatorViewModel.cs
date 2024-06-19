@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlantX.MVVM.ViewModels.Raports
 {
-    class RaportCreatorViewModel : ViewModelBase
+    class RaportCreatorViewModel : NotifyPropertyBase
     {
     }
 }

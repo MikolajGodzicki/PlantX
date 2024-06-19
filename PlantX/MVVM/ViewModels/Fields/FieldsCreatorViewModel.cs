@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlantX.MVVM.ViewModels.Fields
 {
-    class FieldsCreatorViewModel : ViewModelBase
+    class FieldsCreatorViewModel : NotifyPropertyBase
     {
     }
 }

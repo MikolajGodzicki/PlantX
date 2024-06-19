@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PlantX.MVVM.ViewModels.Plants {
-	class PlantsCreatorViewModel : ViewModelBase {
+	class PlantsCreatorViewModel : NotifyPropertyBase {
         public PlantsCreatorViewModel()
         {
             

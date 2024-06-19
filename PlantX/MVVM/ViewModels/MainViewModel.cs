@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows;
 
 namespace PlantX.MVVM.ViewModels {
-	internal class MainViewModel : ViewModelBase {
+	internal class MainViewModel : NotifyPropertyBase {
 		private PlantsViewModel plantsVM { get; set; }
 		private FieldsViewModel fieldsVM { get; set; }
 		private PesticidesViewModel pesticidesVM { get; set; }

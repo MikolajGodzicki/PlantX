@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PlantX.MVVM.ViewModels.Plants
 {
-    class PlantsViewModel : ViewModelBase {
+    class PlantsViewModel : NotifyPropertyBase {
 		private PlantsCreatorViewModel creatorVM { get; set; }
 		private PlantsEditorViewModel editorVM { get; set; }
 

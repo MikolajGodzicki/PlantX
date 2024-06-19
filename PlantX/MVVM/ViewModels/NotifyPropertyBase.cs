@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 
 namespace PlantX.MVVM.ViewModels {
-	internal class ViewModelBase : INotifyPropertyChanged {
+	internal class NotifyPropertyBase : INotifyPropertyChanged {
 		public event PropertyChangedEventHandler? PropertyChanged;
 
 		protected void OnPropertyChanged([CallerMemberName] string? propertyName = null) {
