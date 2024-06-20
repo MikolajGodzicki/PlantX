@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlantX.MVVM.ViewModels.Pesticides
-{
-    class PesticidesEditorViewModel : NotifyPropertyBase
-    {
-    }
+namespace PlantX.MVVM.ViewModels.Pesticides {
+	class PesticidesEditorViewModel : NotifyPropertyBase {
+	}
 }

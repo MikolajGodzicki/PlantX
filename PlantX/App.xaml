@@ -18,19 +18,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Theme/DataGrid/DataGridEditButtonTheme.xaml"/>
-                <ResourceDictionary Source="Theme/DataGrid/DataGridEditButtonCellTemplate.xaml" />
-                <ResourceDictionary Source="Theme/DataGrid/DataGridModernTheme.xaml" />
-                <ResourceDictionary Source="Theme/DataGrid/DataGridCellModernTheme.xaml" />
-                <ResourceDictionary Source="Theme/DataGrid/DataGridRowModernTheme.xaml" />
-                <ResourceDictionary Source="Theme/DataGrid/DataGridColumnHeaderModernTheme.xaml" />
-
-                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
-                <ResourceDictionary Source="Theme/MenuTitleTheme.xaml"/>
-                <ResourceDictionary Source="Theme/MainViewButtonTheme.xaml"/>
-                <ResourceDictionary Source="Theme/FormInputTheme.xaml"/>
-                <ResourceDictionary Source="Theme/FormButtonTheme.xaml" />
-                <ResourceDictionary Source="Theme/FormComboboxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/DataGrid/DataGridThemes.xaml" />
+                <ResourceDictionary Source="Theme/Themes.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type vm_plants:PlantsViewModel}">

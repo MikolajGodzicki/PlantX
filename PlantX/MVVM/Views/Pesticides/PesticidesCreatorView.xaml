@@ -1,11 +1,12 @@
 ﻿<UserControl x:Class="PlantX.MVVM.Views.Pesticides.PesticidesCreatorView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:PlantX.Controls"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
     <StackPanel>
         <TextBlock Text="Nazwa pestycydu"
                    Margin="30,5,5,10"
@@ -22,15 +23,25 @@
                                 Style="{DynamicResource FormInput}"
                                 Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
 
-        <TextBlock Text="Nazwa pestycydu"
+        <TextBlock Text="Moc"
                    Margin="30,5,5,10"
                    FontSize="16"
                    FontWeight="Medium"
                    FontFamily="/Fonts/#Inter" />
-        
-        <ComboBox Width="200">
-            
-        </ComboBox>
+
+        <StackPanel  Orientation="Horizontal"
+                     Margin="30,0,0,0">
+            <RadioButton Content="L/Ha"
+                         Height="40"
+                         Style="{DynamicResource PesticideTypeButton}"
+                         IsChecked="{Binding SelectedPesticideType, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=LitersPerHectar}" />
+            <RadioButton Content="Kg/Ha"
+                         Margin="15,0,0,0"
+                         Height="40"
+                         Style="{DynamicResource PesticideTypeButton}"
+                         IsChecked="{Binding SelectedPesticideType, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=KilogramsPerHectar}" />
+        </StackPanel>
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
@@ -40,7 +51,24 @@
 
             <StackPanel Grid.Column="0"
                         Margin="30,0,0,0">
-                <TextBlock Text="Litrów"
+                <TextBlock Text="{Binding WeightType}"
+                           Margin="0,5,0,10"
+                           FontSize="16"
+                           FontWeight="Medium"
+                           FontFamily="/Fonts/#Inter" />
+
+                <local:FormFloatNumberInputControl Width="100"
+                                              Height="40"
+                                              VerticalContentAlignment="Center"
+                                              HorizontalAlignment="Left"
+                                              Margin="0,0,0,50"
+                                              Placeholder="1"
+                                              Style="{DynamicResource FormInput}"
+                                              Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+            <StackPanel Grid.Column="1"
+                        Margin="30,0,0,0">
+                <TextBlock Text="Hektarów"
                            Margin="0,5,0,10"
                            FontSize="16"
                            FontWeight="Medium"
@@ -51,29 +79,12 @@
                                               VerticalContentAlignment="Center"
                                               HorizontalAlignment="Left"
                                               Margin="0,0,0,50"
-                                              Placeholder="1"
-                                              Style="{DynamicResource FormInput}"
-                                              Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}"/>
-            </StackPanel>
-            <StackPanel Grid.Column="1"
-                        Margin="30,0,0,0">
-                <TextBlock Text="Hektarów"
-                           Margin="0,5,0,10"
-                           FontSize="16"
-                           FontWeight="Medium"
-                           FontFamily="/Fonts/#Inter"/>
-
-                <local:FormNumberInputControl Width="100"
-                                              Height="40"
-                                              VerticalContentAlignment="Center"
-                                              HorizontalAlignment="Left"
-                                              Margin="0,0,0,50"
                                               Placeholder="100"
                                               Style="{DynamicResource FormInput}"
-                                              Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}"/>
+                                              Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
         </Grid>
-        
+
         <Button Width="170"
                 HorizontalAlignment="Left"
                 Content="Utwórz pestycyd"
