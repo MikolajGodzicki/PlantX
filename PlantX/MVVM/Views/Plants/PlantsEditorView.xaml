@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:PlantX.Controls"
              mc:Ignorable="d"
-             d:DesignHeight="450"
+             d:DesignHeight="900"
              d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -46,15 +46,15 @@
                                     Placeholder="Koper"
                                     HorizontalAlignment="Left"
                                     Margin="30,0,5,50"
-                                    Style="{StaticResource FormInput}"
+                                    Style="{DynamicResource FormInput}"
                                     Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
 
             <Button Width="150"
                     HorizontalAlignment="Left"
-                    Content="Zmień nazwę"
+                    Content="Zmień roślinę"
                     Margin="30,0,0,0"
                     Command="{Binding ChangePlantNameCommand}"
-                    Style="{StaticResource FormButton}" />
+                    Style="{DynamicResource FormButton}" />
         </StackPanel>
     </Grid>
 </UserControl>

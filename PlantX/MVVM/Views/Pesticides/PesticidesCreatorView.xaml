@@ -3,11 +3,82 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:PlantX.MVVM.Views.Pesticides"
+             xmlns:local="clr-namespace:PlantX.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock>Pesticides creator</TextBlock>
+    <StackPanel>
+        <TextBlock Text="Nazwa pestycydu"
+                   Margin="30,5,5,10"
+                   FontSize="16"
+                   FontWeight="Medium"
+                   FontFamily="/Fonts/#Inter" />
+
+        <local:FormInputControl Width="250"
+                                Height="40"
+                                VerticalContentAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Margin="30,0,5,50"
+                                Placeholder="Stomp"
+                                Style="{DynamicResource FormInput}"
+                                Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
+
+        <TextBlock Text="Nazwa pestycydu"
+                   Margin="30,5,5,10"
+                   FontSize="16"
+                   FontWeight="Medium"
+                   FontFamily="/Fonts/#Inter" />
+        
+        <ComboBox Width="200">
             
-    </Grid>
+        </ComboBox>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0"
+                        Margin="30,0,0,0">
+                <TextBlock Text="Litrów"
+                           Margin="0,5,0,10"
+                           FontSize="16"
+                           FontWeight="Medium"
+                           FontFamily="/Fonts/#Inter" />
+
+                <local:FormNumberInputControl Width="100"
+                                              Height="40"
+                                              VerticalContentAlignment="Center"
+                                              HorizontalAlignment="Left"
+                                              Margin="0,0,0,50"
+                                              Placeholder="1"
+                                              Style="{DynamicResource FormInput}"
+                                              Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1"
+                        Margin="30,0,0,0">
+                <TextBlock Text="Hektarów"
+                           Margin="0,5,0,10"
+                           FontSize="16"
+                           FontWeight="Medium"
+                           FontFamily="/Fonts/#Inter"/>
+
+                <local:FormNumberInputControl Width="100"
+                                              Height="40"
+                                              VerticalContentAlignment="Center"
+                                              HorizontalAlignment="Left"
+                                              Margin="0,0,0,50"
+                                              Placeholder="100"
+                                              Style="{DynamicResource FormInput}"
+                                              Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+        </Grid>
+        
+        <Button Width="170"
+                HorizontalAlignment="Left"
+                Content="Utwórz pestycyd"
+                Margin="30,0,0,0"
+                Style="{DynamicResource FormButton}"
+                Command="{Binding AddPlantCommand}" />
+    </StackPanel>
 </UserControl>

@@ -19,6 +19,25 @@
                                        Margin="10,0,10,0"/>
                             </Grid>
                         </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed"
+                                     Value="True">
+                                <Setter TargetName="FormButtonBorder"
+                                        Property="Background"
+                                        Value="#111111" />
+                                <Setter TargetName="FormButtonBorder"
+                                        Property="RenderTransformOrigin"
+                                        Value="0.5,0.5" />
+                                <Setter TargetName="FormButtonBorder"
+                                        Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="0.98"
+                                                        ScaleY="0.98" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>

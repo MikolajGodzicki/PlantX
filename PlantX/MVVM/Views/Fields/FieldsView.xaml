@@ -21,15 +21,15 @@
                 <RadioButton Content="Utwórz"
                  Margin="5,0,5,0"
                  Height="30"
-                 Style="{StaticResource MainViewButton}"
+                 Style="{DynamicResource MainViewButton}"
                  Command="{Binding CreatorCommand}"
                  IsChecked="{Binding SelectedOption, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Creator}"/>
                 <RadioButton Content="Edytuj"
                  Margin="0,0,5,0"
                  Height="30"
-                 Style="{StaticResource MainViewButton}"
+                 Style="{DynamicResource MainViewButton}"
                  Command="{Binding EditorCommand}"
-                 IsChecked="{Binding SelectedOption, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Editor}"/>
+                             IsChecked="{Binding SelectedOption, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Editor}"/>
             </StackPanel>
         </Border>
 
