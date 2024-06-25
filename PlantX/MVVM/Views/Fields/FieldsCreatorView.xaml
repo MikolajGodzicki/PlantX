@@ -22,7 +22,7 @@
                                 Margin="30,0,5,50"
                                 Placeholder="Na bycym"
                                 Style="{DynamicResource FormInput}"
-                                Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
+                                Text="{Binding CurrentFieldName, UpdateSourceTrigger=PropertyChanged}" />
 
 
         <TextBlock Text="Powierzchnia (Ary)"
@@ -38,13 +38,13 @@
                                 Margin="30,0,5,50"
                                 Placeholder="100"
                                 Style="{DynamicResource FormInput}"
-                                Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
+                                Text="{Binding CurrentFieldArea, UpdateSourceTrigger=PropertyChanged}" />
 
         <Button Width="200"
                 HorizontalAlignment="Left"
                 Content="Utwórz obszar polny"
                 Margin="30,0,0,0"
                 Style="{DynamicResource FormButton}"
-                Command="{Binding AddPlantCommand}" />
+                Command="{Binding AddFieldCommand}" />
     </StackPanel>
 </UserControl>

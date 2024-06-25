@@ -53,7 +53,7 @@
                     HorizontalAlignment="Left"
                     Content="Zmień roślinę"
                     Margin="30,0,0,0"
-                    Command="{Binding ChangePlantNameCommand}"
+                    Command="{Binding ChangePlantCommand}"
                     Style="{DynamicResource FormButton}" />
         </StackPanel>
     </Grid>

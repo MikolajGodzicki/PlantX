@@ -21,7 +21,7 @@
                                 Margin="30,0,5,50"
                                 Placeholder="Stomp"
                                 Style="{DynamicResource FormInput}"
-                                Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
+                                Text="{Binding CurrentPesticideName, UpdateSourceTrigger=PropertyChanged}" />
 
         <TextBlock Text="Moc"
                    Margin="30,5,5,10"
@@ -64,7 +64,7 @@
                                               Margin="0,0,0,50"
                                               Placeholder="1"
                                               Style="{DynamicResource FormInput}"
-                                              Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
+                                              Text="{Binding CurrentPesticideWeight, UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
             <StackPanel Grid.Column="1"
                         Margin="30,0,0,0">
@@ -81,7 +81,7 @@
                                               Margin="0,0,0,50"
                                               Placeholder="100"
                                               Style="{DynamicResource FormInput}"
-                                              Text="{Binding CurrentPlantName, UpdateSourceTrigger=PropertyChanged}" />
+                                              Text="{Binding CurrentPesticideArea, UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
         </Grid>
 
@@ -90,6 +90,6 @@
                 Content="Utwórz pestycyd"
                 Margin="30,0,0,0"
                 Style="{DynamicResource FormButton}"
-                Command="{Binding AddPlantCommand}" />
+                Command="{Binding AddPesticideCommand}" />
     </StackPanel>
 </UserControl>

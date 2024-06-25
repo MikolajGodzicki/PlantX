@@ -8,9 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlantX.MVVM.ViewModels.Plants
-{
-    class PlantsViewModel : NotifyPropertyBase {
+namespace PlantX.MVVM.ViewModels.Plants {
+	class PlantsViewModel : NotifyPropertyBase {
 		private PlantsCreatorViewModel creatorVM { get; set; }
 		private PlantsEditorViewModel editorVM { get; set; }
 
@@ -19,10 +18,8 @@ namespace PlantX.MVVM.ViewModels.Plants
 		public string SelectedOption {
 			get { return selectedOption; }
 			set {
-				if (selectedOption != value) {
-					selectedOption = value;
-					OnPropertyChanged();
-				}
+				selectedOption = value;
+				OnPropertyChanged();
 			}
 		}
 

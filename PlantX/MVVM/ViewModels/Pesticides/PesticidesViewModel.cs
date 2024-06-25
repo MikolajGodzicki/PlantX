@@ -6,9 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlantX.MVVM.ViewModels.Pesticides
-{
-    class PesticidesViewModel : NotifyPropertyBase {
+namespace PlantX.MVVM.ViewModels.Pesticides {
+	class PesticidesViewModel : NotifyPropertyBase {
 		private PesticidesCreatorViewModel creatorVM { get; set; }
 		private PesticidesEditorViewModel editorVM { get; set; }
 
@@ -17,10 +16,8 @@ namespace PlantX.MVVM.ViewModels.Pesticides
 		public string SelectedOption {
 			get { return selectedOption; }
 			set {
-				if (selectedOption != value) {
-					selectedOption = value;
-					OnPropertyChanged();
-				}
+				selectedOption = value;
+				OnPropertyChanged();
 			}
 		}
 

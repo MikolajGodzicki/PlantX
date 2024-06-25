@@ -1,20 +1,36 @@
-﻿using System;
+﻿using PlantX.MVVM.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlantX.MVVM.Models.Fields
-{
-    public class Field
-    {
-        public string Name { get; set; }
-        public decimal Area { get; set; }
+namespace PlantX.MVVM.Models.Fields {
+	public class Field : NotifyPropertyBase {
+		public Guid Id { get; set; }
 
-        public Field(string name, decimal area)
-        {
-            Name = name;
-            Area = area;
-        }
-    }
+		private string name;
+		public string Name {
+			get => name;
+			set {
+				name = value;
+				OnPropertyChanged();
+			}
+		}
+
+		private int area;
+		public int Area {
+			get => area;
+			set {
+				area = value;
+				OnPropertyChanged();
+			}
+		}
+
+		public Field(string name, int area) {
+			Id = Guid.NewGuid();
+			Name = name;
+			Area = area;
+		}
+	}
 }

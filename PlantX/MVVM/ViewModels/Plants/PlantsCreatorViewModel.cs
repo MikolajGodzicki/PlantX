@@ -29,7 +29,11 @@ namespace PlantX.MVVM.ViewModels.Plants {
         }
 
         private void AddPlant() {
-			if (String.IsNullOrEmpty(CurrentPlantName)) {
+			if (string.IsNullOrEmpty(CurrentPlantName)) {
+				return;
+			}
+
+			if (PlantX_API.AvailablePlants.Any(e => e.Name == CurrentPlantName)) {
 				return;
 			}
 

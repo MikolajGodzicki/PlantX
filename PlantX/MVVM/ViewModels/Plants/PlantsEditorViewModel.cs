@@ -41,13 +41,13 @@ namespace PlantX.MVVM.ViewModels.Plants
 			}
 		}
 
-		public RelayCommand ChangePlantNameCommand { get; set; }
+		public RelayCommand ChangePlantCommand { get; set; }
 
 		public PlantsEditorViewModel() {
 			AvailablePlants = PlantX_API.AvailablePlants;
 
-			ChangePlantNameCommand = new RelayCommand(e => {
-				ChangePlantName();
+			ChangePlantCommand = new RelayCommand(e => {
+				ChangePlant();
 			});
 
 		}
@@ -56,7 +56,7 @@ namespace PlantX.MVVM.ViewModels.Plants
 			CurrentPlantName = SelectedPlant.Name;
 		}
 
-		private void ChangePlantName() {
+		private void ChangePlant() {
 			Plant? plantToEdit = GetPlantById();
 			if (plantToEdit is not null) {
 				plantToEdit.Name = CurrentPlantName;
