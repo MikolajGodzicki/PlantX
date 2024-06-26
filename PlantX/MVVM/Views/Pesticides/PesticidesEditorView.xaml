@@ -28,7 +28,7 @@
                     <DataGridTextColumn Header="Dostępne pestycydy"
                                         Binding="{Binding Name}" />
                     <DataGridTextColumn Header="Moc"
-                                        Binding="{Binding Power}" />
+                                        Binding="{Binding Weight}" />
                 </DataGrid.Columns>
 
             </DataGrid>
@@ -72,7 +72,6 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
-                    <ColumnDefinition />
                     <ColumnDefinition Width="4*" />
                 </Grid.ColumnDefinitions>
 
@@ -92,23 +91,6 @@
                                                        Placeholder="1"
                                                        Style="{DynamicResource FormInput}"
                                                        Text="{Binding CurrentPesticideWeight, UpdateSourceTrigger=PropertyChanged}" />
-                </StackPanel>
-                <StackPanel Grid.Column="1"
-                            Margin="30,0,0,0">
-                    <TextBlock Text="Hektarów"
-                               Margin="0,5,0,10"
-                               FontSize="16"
-                               FontWeight="Medium"
-                               FontFamily="/Fonts/#Inter" />
-
-                    <local:FormNumberInputControl Width="100"
-                                                  Height="40"
-                                                  VerticalContentAlignment="Center"
-                                                  HorizontalAlignment="Left"
-                                                  Margin="0,0,0,50"
-                                                  Placeholder="100"
-                                                  Style="{DynamicResource FormInput}"
-                                                  Text="{Binding CurrentPesticideArea, UpdateSourceTrigger=PropertyChanged}" />
                 </StackPanel>
             </Grid>
 

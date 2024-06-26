@@ -41,11 +41,11 @@ namespace PlantX.MVVM.ViewModels.Pesticides {
 		}
 
 
+
 		public RelayCommand AddPesticideCommand { get; set; }
 
 		public PesticidesEditorViewModel() {
 			SelectedPesticideType = "LitersPerHectar";
-
 		}
 
 		private void SetWeightType(string pesticideType) {

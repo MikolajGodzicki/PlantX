@@ -1,18 +1,42 @@
-﻿namespace PlantX.MVVM.Models.Pesticides {
-	[Serializable]
-	public class Pesticide {
-		/// <summary>
-		/// Defines name of pesticide used in farming
-		/// </summary>
-		public string Name { get; set; }
+﻿using PlantX.MVVM.ViewModels;
 
-		/// <summary>
-		/// Defines the power of pesticide, ex. 10 Liters per 100 Ares
-		/// </summary>
-		public PesticidePower Power { get; set; }
+namespace PlantX.MVVM.Models.Pesticides {
+	public class Pesticide : NotifyPropertyBase {
 
-		public Pesticide(string name) {
+		public Guid Id { get; set; }
+
+		private string name;
+		public string Name {
+			get => name;
+			set {
+				name = value;
+				OnPropertyChanged();
+			}
+		}
+
+		private decimal weight;
+		public decimal Weight {
+			get => weight;
+			set {
+				weight = value;
+				OnPropertyChanged();
+			}
+		}
+
+		private WeightType weightType;
+		public WeightType WeightType {
+			get => weightType;
+			set {
+				weightType = value;
+				OnPropertyChanged();
+			}
+		}
+
+		public Pesticide(string name, decimal weight, WeightType weightType) {
+			Id = Guid.NewGuid();
 			Name = name;
+			Weight = weight;
+			WeightType = WeightType;
 		}
 	}
 }

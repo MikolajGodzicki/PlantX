@@ -75,7 +75,7 @@ namespace PlantX.MVVM.ViewModels.Pesticides {
 				return;
 			}
 
-			Pesticide pesticide = new Pesticide(CurrentPesticideName);
+			Pesticide pesticide = new Pesticide(CurrentPesticideName, 1, Models.Pesticides.WeightType.Liter);
 			PlantX_API.AvailablePesticides.Add(pesticide);
 		}
 	}
