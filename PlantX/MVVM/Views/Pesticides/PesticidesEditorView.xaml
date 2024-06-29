@@ -21,14 +21,15 @@
                       CellStyle="{DynamicResource DataGridCellModern}"
                       Style="{DynamicResource DataGridModern}"
                       AutoGenerateColumns="False"
-                      ItemsSource="{Binding AvailableFields}"
+                      ItemsSource="{Binding AvailablePesticides}"
                       IsReadOnly="True"
-                      SelectedItem="{Binding SelectedPesticides}">
+                      SelectedItem="{Binding SelectedPesticide}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Dostępne pestycydy"
                                         Binding="{Binding Name}" />
-                    <DataGridTextColumn Header="Moc"
+                    <DataGridTextColumn Header="Moc pestycydu"
                                         Binding="{Binding Weight}" />
+                    <DataGridTextColumn Binding="{Binding WeightType, Converter={StaticResource EnumToSelectedStringConverter}}" />
                 </DataGrid.Columns>
 
             </DataGrid>
@@ -61,12 +62,12 @@
                 <RadioButton Content="L/Ha"
                              Height="40"
                              Style="{DynamicResource PesticideTypeButton}"
-                             IsChecked="{Binding SelectedPesticideType, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=LitersPerHectar}" />
+                             IsChecked="{Binding SelectedPesticideType, Converter={StaticResource EnumConverter}, ConverterParameter=Liter}" />
                 <RadioButton Content="Kg/Ha"
                              Margin="15,0,0,0"
                              Height="40"
                              Style="{DynamicResource PesticideTypeButton}"
-                             IsChecked="{Binding SelectedPesticideType, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=KilogramsPerHectar}" />
+                             IsChecked="{Binding SelectedPesticideType, Converter={StaticResource EnumConverter}, ConverterParameter=Kilogram}" />
             </StackPanel>
 
             <Grid>
@@ -77,7 +78,7 @@
 
                 <StackPanel Grid.Column="0"
                             Margin="30,0,0,0">
-                    <TextBlock Text="{Binding WeightType}"
+                    <TextBlock Text="{Binding WeightTypeText}"
                                Margin="0,5,0,10"
                                FontSize="16"
                                FontWeight="Medium"
@@ -90,7 +91,7 @@
                                                        Margin="0,0,0,50"
                                                        Placeholder="1"
                                                        Style="{DynamicResource FormInput}"
-                                                       Text="{Binding CurrentPesticideWeight, UpdateSourceTrigger=PropertyChanged}" />
+                                                       Text="{Binding CurrentPesticideWeight, Converter={StaticResource StringToDecimalConverter}, UpdateSourceTrigger=PropertyChanged}" />
                 </StackPanel>
             </Grid>
 

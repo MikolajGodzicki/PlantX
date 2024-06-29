@@ -36,7 +36,7 @@ namespace PlantX.MVVM.Models.Pesticides {
 			Id = Guid.NewGuid();
 			Name = name;
 			Weight = weight;
-			WeightType = WeightType;
+			WeightType = weightType;
 		}
 	}
 }

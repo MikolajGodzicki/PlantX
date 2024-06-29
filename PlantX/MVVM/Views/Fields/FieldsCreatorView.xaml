@@ -38,7 +38,7 @@
                                 Margin="30,0,5,50"
                                 Placeholder="100"
                                 Style="{DynamicResource FormInput}"
-                                Text="{Binding CurrentFieldArea, UpdateSourceTrigger=PropertyChanged}" />
+                                Text="{Binding CurrentFieldArea, Converter={StaticResource StringToIntConverter}, UpdateSourceTrigger=PropertyChanged}" />
 
         <Button Width="200"
                 HorizontalAlignment="Left"

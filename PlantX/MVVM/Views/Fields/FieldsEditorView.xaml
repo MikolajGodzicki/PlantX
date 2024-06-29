@@ -36,7 +36,7 @@
 
         <StackPanel Grid.Row="1">
             <TextBlock Text="Nazwa obszaru polnego"
-                       Margin="30,5,5,10"
+                       Margin="30,30,5,10"
                        FontSize="16"
                        FontWeight="Medium"
                        FontFamily="/Fonts/#Inter" />
@@ -64,7 +64,7 @@
                                           Margin="30,0,5,50"
                                           Placeholder="100"
                                           Style="{DynamicResource FormInput}"
-                                          Text="{Binding CurrentFieldArea, UpdateSourceTrigger=PropertyChanged}" />
+                                          Text="{Binding CurrentFieldArea, Converter={StaticResource StringToIntConverter}, UpdateSourceTrigger=PropertyChanged}" />
 
             <Button Width="200"
                     HorizontalAlignment="Left"
