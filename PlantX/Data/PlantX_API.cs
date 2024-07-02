@@ -10,10 +10,20 @@ using System.Threading.Tasks;
 
 namespace PlantX.Data
 {
-    public sealed class PlantX_API
-    {
-        public static ObservableCollection<Plant> AvailablePlants = [new Plant("Koper"), new Plant("Natka")];
+	public sealed class PlantX_API {
+		public static ObservableCollection<Plant> AvailablePlants = [new Plant("Koper"), new Plant("Natka")];
 		public static ObservableCollection<Pesticide> AvailablePesticides = [new Pesticide("Stomp", 10, WeightType.Liter), new Pesticide("Amistar", 20, WeightType.Kilogram)];
 		public static ObservableCollection<Field> AvailableFields = [new Field("U taty", 100), new Field("Byce", 50)];
+
+		public static Field? GetFieldById(Guid ID) {
+			return AvailableFields.FirstOrDefault(e => e.Id == ID);
+		}
+
+		public static Pesticide? GetPesticideById(Guid ID) {
+			return AvailablePesticides.FirstOrDefault(e => e.Id == ID);
+		}
+		public static Plant? GetPlantById(Guid ID) {
+			return AvailablePlants.FirstOrDefault(e => e.Id == ID);
+		}
 	}
 }

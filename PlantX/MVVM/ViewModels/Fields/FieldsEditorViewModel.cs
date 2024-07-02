@@ -1,6 +1,8 @@
 ﻿using PlantX.Data;
+using PlantX.Locale;
 using PlantX.MVVM.Models.Fields;
 using PlantX.MVVM.Models.Plants;
+using PlantX.Notifications;
 using PlantX.Utils;
 using System;
 using System.Collections.Generic;
@@ -9,9 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlantX.MVVM.ViewModels.Fields
-{
-    class FieldsEditorViewModel : NotifyPropertyBase {
+namespace PlantX.MVVM.ViewModels.Fields {
+	class FieldsEditorViewModel : NotifyPropertyBase {
 		private ObservableCollection<Field> availableFields;
 		public ObservableCollection<Field> AvailableFields {
 			get => availableFields;
@@ -41,9 +42,9 @@ namespace PlantX.MVVM.ViewModels.Fields
 			}
 		}
 
-		private string currentFieldArea;
+		private int currentFieldArea;
 
-		public string CurrentFieldArea {
+		public int CurrentFieldArea {
 			get => currentFieldArea;
 			set {
 				currentFieldArea = value;
@@ -64,24 +65,36 @@ namespace PlantX.MVVM.ViewModels.Fields
 
 		private void UpdateEditForm() {
 			CurrentFieldName = SelectedField.Name;
-			CurrentFieldArea = SelectedField.Area.ToString();
+			CurrentFieldArea = SelectedField.Area;
 		}
 
 		private void ChangeField() {
-			Field? fieldToEdit = GetFieldById();
+			Field? fieldToEdit = PlantX_API.GetFieldById(SelectedField.Id);
 
-			if (fieldToEdit is not null) {
-				fieldToEdit.Name = CurrentFieldName;
-				fieldToEdit.Area = Convert.ToInt32(CurrentFieldArea);
-			}
-		}
-
-		private Field? GetFieldById() {
-			if (SelectedField is not null) {
-				return AvailableFields.First(e => e.Id == SelectedField.Id);
+			if (fieldToEdit is null) {
+				NotificationsManager.ShowError(Locale_PL.Field_NotExists);
+				return;
 			}
 
-			return null;
+			if (string.IsNullOrEmpty(CurrentFieldName)) {
+				NotificationsManager.ShowError(Locale_PL.Field_NameRequired);
+				return;
+			}
+
+			if (CurrentFieldArea <= 0) {
+				NotificationsManager.ShowError(Locale_PL.Field_AreaGreaterThanZero);
+				return;
+			}
+
+			if (PlantX_API.AvailableFields.Any(e => e.Name == CurrentFieldName && e.Id != fieldToEdit.Id)) {
+				NotificationsManager.ShowError(Locale_PL.Field_Exists);
+				return;
+			}
+
+			fieldToEdit.Name = CurrentFieldName;
+			fieldToEdit.Area = CurrentFieldArea;
+
+			NotificationsManager.ShowSuccess(Locale_PL.Field_Edited);
 		}
 	}
 }

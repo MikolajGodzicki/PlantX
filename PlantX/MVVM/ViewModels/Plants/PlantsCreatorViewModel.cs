@@ -1,5 +1,7 @@
 ﻿using PlantX.Data;
+using PlantX.Locale;
 using PlantX.MVVM.Models.Plants;
+using PlantX.Notifications;
 using PlantX.Utils;
 using System;
 using System.Collections.Generic;
@@ -30,15 +32,19 @@ namespace PlantX.MVVM.ViewModels.Plants {
 
         private void AddPlant() {
 			if (string.IsNullOrEmpty(CurrentPlantName)) {
+				NotificationsManager.ShowError(Locale_PL.Plant_NameRequired);
 				return;
 			}
 
 			if (PlantX_API.AvailablePlants.Any(e => e.Name == CurrentPlantName)) {
+				NotificationsManager.ShowError(Locale_PL.Plant_Exists);
 				return;
 			}
 
 			Plant plant = new Plant(CurrentPlantName);
 			PlantX_API.AvailablePlants.Add(plant);
-        }
+
+			NotificationsManager.ShowSuccess(Locale_PL.Plant_Created);
+		}
     }
 }

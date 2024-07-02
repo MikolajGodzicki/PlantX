@@ -1,6 +1,9 @@
-﻿using PlantX.Data;
+﻿using Notification.Wpf;
+using PlantX.Data;
+using PlantX.Locale;
 using PlantX.MVVM.Models.Pesticides;
 using PlantX.MVVM.Models.Plants;
+using PlantX.Notifications;
 using PlantX.Utils;
 using System;
 using System.Collections.Generic;
@@ -10,23 +13,33 @@ using System.Threading.Tasks;
 
 namespace PlantX.MVVM.ViewModels.Pesticides {
 	class PesticidesCreatorViewModel : NotifyPropertyBase {
-		private string weightType;
+		private string weightTypeText;
 
-		public string WeightType {
-			get { return weightType; }
+		public string WeightTypeText {
+			get { return weightTypeText; }
 			set {
-				weightType = value;
+				weightTypeText = value;
 				OnPropertyChanged();
 			}
 		}
 
-		private string selectedPesticideType;
+		private WeightType selectedPesticideType;
 
-		public string SelectedPesticideType {
+		public WeightType SelectedPesticideType {
 			get { return selectedPesticideType; }
 			set {
 				selectedPesticideType = value;
 				SetWeightType(SelectedPesticideType);
+				OnPropertyChanged();
+			}
+		}
+
+		private decimal currentPesticideWeight;
+
+		public decimal CurrentPesticideWeight {
+			get { return currentPesticideWeight; }
+			set {
+				currentPesticideWeight = value;
 				OnPropertyChanged();
 			}
 		}
@@ -45,38 +58,47 @@ namespace PlantX.MVVM.ViewModels.Pesticides {
 		public RelayCommand AddPesticideCommand { get; set; }
 
 		public PesticidesCreatorViewModel() {
-			SelectedPesticideType = "LitersPerHectar";
+			SelectedPesticideType = WeightType.Liter;
 
 			AddPesticideCommand = new RelayCommand(e => {
 				AddPesticide();
 			});
 		}
 
-		private void SetWeightType(string pesticideType) {
+		private void SetWeightType(WeightType pesticideType) {
 			switch (pesticideType) {
-				case "LitersPerHectar":
-					WeightType = "Litrów";
+				case WeightType.Liter:
+					WeightTypeText = "Litrów";
 					break;
-				case "KilogramsPerHectar":
-					WeightType = "Kilogramów";
+				case WeightType.Kilogram:
+					WeightTypeText = "Kilogramów";
 					break;
 				default:
-					WeightType = "Nieznany";
+					WeightTypeText = "Nieznany";
 					break;
 			}
 		}
 
 		private void AddPesticide() {
 			if (string.IsNullOrEmpty(CurrentPesticideName)) {
+				NotificationsManager.ShowError(Locale_PL.Pesticide_NameRequired);
+				return;
+			}
+
+			if (CurrentPesticideWeight <= 0) {
+				NotificationsManager.ShowError(Locale_PL.Pesticide_WeightGreaterThanZero);
 				return;
 			}
 
 			if (PlantX_API.AvailablePesticides.Any(e => e.Name == CurrentPesticideName)) {
+				NotificationsManager.ShowError(Locale_PL.Pesticide_Exists);
 				return;
 			}
 
-			Pesticide pesticide = new Pesticide(CurrentPesticideName, 1, Models.Pesticides.WeightType.Liter);
+			Pesticide pesticide = new Pesticide(CurrentPesticideName, CurrentPesticideWeight, SelectedPesticideType);
 			PlantX_API.AvailablePesticides.Add(pesticide);
+
+			NotificationsManager.ShowSuccess(Locale_PL.Pesticide_Created);
 		}
 	}
 }

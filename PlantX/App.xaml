@@ -59,7 +59,11 @@
                 <view_raports:ShowRaportsView/>
             </DataTemplate>
 
-            <converters:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
+            <converters:StringConverter x:Key="StringConverter" />
+            <converters:EnumConverter x:Key="EnumConverter" />
+            <converters:StringToIntConverter x:Key="StringToIntConverter" />
+            <converters:StringToDecimalConverter x:Key="StringToDecimalConverter" />
+            <converters:EnumToSelectedStringConverter x:Key="EnumToSelectedStringConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

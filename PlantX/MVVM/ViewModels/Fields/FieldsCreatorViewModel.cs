@@ -1,6 +1,8 @@
 ﻿using PlantX.Data;
+using PlantX.Locale;
 using PlantX.MVVM.Models.Fields;
 using PlantX.MVVM.Models.Plants;
+using PlantX.Notifications;
 using PlantX.Utils;
 using System;
 using System.Collections.Generic;
@@ -22,9 +24,9 @@ namespace PlantX.MVVM.ViewModels.Fields
 			}
 		}
 
-		private string currentFieldArea;
+		private int currentFieldArea;
 
-		public string CurrentFieldArea {
+		public int CurrentFieldArea {
 			get => currentFieldArea;
 			set {
 				currentFieldArea = value;
@@ -41,16 +43,25 @@ namespace PlantX.MVVM.ViewModels.Fields
 		}
 
 		private void AddField() {
-			if (string.IsNullOrEmpty(CurrentFieldName) || string.IsNullOrEmpty(CurrentFieldArea)) {
+			if (string.IsNullOrEmpty(CurrentFieldName)) {
+				NotificationsManager.ShowError(Locale_PL.Field_NameRequired);
+				return;
+			}
+
+			if (CurrentFieldArea <= 0) {
+				NotificationsManager.ShowError(Locale_PL.Field_AreaGreaterThanZero);
 				return;
 			}
 
 			if (PlantX_API.AvailableFields.Any(e => e.Name == CurrentFieldName)) {
+				NotificationsManager.ShowError(Locale_PL.Field_Exists);
 				return;
 			}
 
 			Field field = new Field(CurrentFieldName, Convert.ToInt32(CurrentFieldArea));
 			PlantX_API.AvailableFields.Add(field);
+
+			NotificationsManager.ShowSuccess(Locale_PL.Field_Created);
 		}
 	}
 }
