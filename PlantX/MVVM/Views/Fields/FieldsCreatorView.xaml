@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:PlantX.Controls"
+             xmlns:local="clr-namespace:PlantX.MVVM.Views.Fields"
+             xmlns:controls="clr-namespace:PlantX.Controls"
              mc:Ignorable="d"
              d:DesignHeight="450"
              d:DesignWidth="800">
@@ -15,7 +16,7 @@
                    FontWeight="Medium"
                    FontFamily="/Fonts/#Inter" />
 
-        <local:FormInputControl Width="250"
+        <controls:FormInputControl Width="250"
                                 Height="40"
                                 VerticalContentAlignment="Center"
                                 HorizontalAlignment="Left"
@@ -31,7 +32,7 @@
                    FontWeight="Medium"
                    FontFamily="/Fonts/#Inter" />
         
-        <local:FormNumberInputControl Width="250"
+        <controls:FormNumberInputControl Width="250"
                                 Height="40"
                                 VerticalContentAlignment="Center"
                                 HorizontalAlignment="Left"
