@@ -27,5 +27,7 @@ namespace PlantX.Locale
 		public const string Plant_NotExists = "Roślina o tej nazwie nie istnieje.";
 		public const string Plant_Created = "Utworzono roślinę.";
 		public const string Plant_Edited = "Zmieniono roślinę.";
+
+		public const string Dialog_PesticideRequired = "Musisz wybrać pestycyd";
 	}
 }

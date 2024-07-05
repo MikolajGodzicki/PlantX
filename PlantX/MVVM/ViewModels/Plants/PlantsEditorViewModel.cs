@@ -75,7 +75,7 @@ namespace PlantX.MVVM.ViewModels.Plants {
 			}
 
 			plantToEdit.Name = CurrentPlantName;
-			NotificationsManager.ShowSuccess(Locale_PL.Pesticide_Edited);
+			NotificationsManager.ShowSuccess(Locale_PL.Plant_Edited);
 		}
 	}
 }

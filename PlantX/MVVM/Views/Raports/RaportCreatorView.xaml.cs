@@ -24,5 +24,5 @@ namespace PlantX.MVVM.Views.Raports
         {
             InitializeComponent();
         }
-    }
+	}
 }

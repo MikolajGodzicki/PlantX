@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +21,10 @@
     <None Remove="Icons\pesticide.png" />
     <None Remove="Icons\plant.png" />
     <None Remove="Icons\raport.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Logo.ico" />
   </ItemGroup>
 
   <ItemGroup>

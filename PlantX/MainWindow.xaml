@@ -8,10 +8,11 @@
         xmlns:vm="clr-namespace:PlantX.MVVM.ViewModels"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="MainWindow" 
+        Title="PlantX" 
         Height="900" 
         Width="1320"
-        Background="#FFFFFF">
+        Background="#FFFFFF"
+        WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <vm:MainViewModel />
     </Window.DataContext>

@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:PlantX.MVVM.Views.Raports"
              xmlns:controls="clr-namespace:PlantX.Controls"
              mc:Ignorable="d"
-             d:DesignHeight="900"
+             d:DesignHeight="830"
              d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -26,23 +26,27 @@
                                        Height="40"
                                        VerticalContentAlignment="Center"
                                        HorizontalAlignment="Left"
-                                       Margin="30,0,5,50"
+                                       Margin="30,0,5,30"
                                        Placeholder="Pryskanie u taty"
                                        Style="{DynamicResource FormInput}"
                                        Text="{Binding CurrentFieldName, UpdateSourceTrigger=PropertyChanged}" />
 
 
-            <TextBlock Text="Pole"
+            <TextBlock Text="Obszar polny"
                        Margin="30,5,5,10"
                        FontSize="16"
                        FontWeight="Medium"
                        FontFamily="/Fonts/#Inter" />
 
-            <ComboBox Width="250"
+            <ComboBox Style="{DynamicResource FormComboBox}"
+                      Width="250"
                       Height="40"
                       VerticalContentAlignment="Center"
                       HorizontalAlignment="Left"
-                      Margin="30,0,5,50" />
+                      Margin="30,0,5,30" 
+                      ItemsSource="{Binding Fields}"
+                      SelectedItem="{Binding SelectedField, UpdateSourceTrigger=PropertyChanged}"
+                      DisplayMemberPath="Name"/>
 
             <TextBlock Text="Roślina"
                        Margin="30,5,5,10"
@@ -50,11 +54,14 @@
                        FontWeight="Medium"
                        FontFamily="/Fonts/#Inter" />
 
-            <ComboBox Width="250"
+            <ComboBox Style="{DynamicResource FormComboBox}"
+                      Width="250"
                       Height="40"
                       VerticalContentAlignment="Center"
                       HorizontalAlignment="Left"
-                      Margin="30,0,5,50" />
+                      Margin="30,0,5,30" 
+                      ItemsSource="{Binding Plants}"
+                      DisplayMemberPath="Name"/>
 
             <TextBlock Text="Data"
                        Margin="30,5,5,10"
@@ -62,7 +69,7 @@
                        FontWeight="Medium"
                        FontFamily="/Fonts/#Inter" />
 
-            <DatePicker Width="250"
+            <DatePicker Style="{DynamicResource FormDatePicker}" Width="250"
                         Height="40"
                         VerticalContentAlignment="Center"
                         HorizontalAlignment="Left"
@@ -73,7 +80,7 @@
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition />
-                <RowDefinition  Height="70" />
+                <RowDefinition  Height="80" />
             </Grid.RowDefinitions>
 
             <Border BorderThickness="2"
@@ -85,25 +92,37 @@
                           CellStyle="{DynamicResource DataGridCellModern}"
                           Style="{DynamicResource DataGridModern}"
                           AutoGenerateColumns="False"
-                          ItemsSource="{Binding AvailableFields}"
+                          ItemsSource="{Binding Pesticides}"
                           IsReadOnly="True"
-                          SelectedItem="{Binding SelectedField}">
+                          SelectedItem="{Binding SelectedPesticide}">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Pestycydy"
-                                            Binding="{Binding Name}" />
-                        <DataGridTextColumn Binding="{Binding Weight}" />
+                                            Binding="{Binding Pesticide.Name}" />
+                        <DataGridTextColumn Binding="{Binding CalculatedWeight}" />
+                        <DataGridTextColumn Binding="{Binding PesticideWeightType}" />
                     </DataGrid.Columns>
                 </DataGrid>
             </Border>
 
             <StackPanel Orientation="Horizontal"
                         Grid.Row="1">
-                <Button Width="170"
-                        HorizontalAlignment="Left"
-                        Content="Dodaj pestycyd"
-                        Margin="30,0,0,0"
-                        Style="{DynamicResource FormButton}"
-                        Command="{Binding AddPesticideCommand}" />
+                <StackPanel>
+                    <TextBlock Text="Dodaj pestycyd"
+                               Margin="30,5,5,5"
+                               FontSize="16"
+                               FontWeight="Medium"
+                               FontFamily="/Fonts/#Inter" />
+
+                    <ComboBox Style="{DynamicResource FormComboBox}"
+                              Width="250"
+                              Height="40"
+                              VerticalContentAlignment="Center"
+                              HorizontalAlignment="Left"
+                              Margin="30,0,5,30"
+                              ItemsSource="{Binding AvailablePesticides}"
+                              SelectedItem="{Binding SelectedAddPesticide, UpdateSourceTrigger=PropertyChanged}"
+                              DisplayMemberPath="Name" />
+                </StackPanel>
                 <Button Width="235"
                         HorizontalAlignment="Left"
                         Content="Usuń wybrany pestycyd"
