@@ -28,6 +28,6 @@ namespace PlantX.Locale
 		public const string Plant_Created = "Utworzono roślinę.";
 		public const string Plant_Edited = "Zmieniono roślinę.";
 
-		public const string Dialog_PesticideRequired = "Musisz wybrać pestycyd";
+		public const string Raport_WrongPesticideIndex = "Wybrano złą pozycje.";
 	}
 }

@@ -13,7 +13,14 @@ namespace PlantX.MVVM.Models.Pesticides
         public Pesticide Pesticide { get; set; }
         public Field Field { get; set; }
 
-        public decimal CalculatedWeight => Pesticide.Weight * ((decimal)Field.Area / 100);
+        public decimal CalculatedWeight {
+            get {
+                if (Field is null)
+                    return 0;
+
+                return Pesticide.Weight * ((decimal)Field.Area / 100);
+            }
+        }
 
         public string PesticideWeightType {
             get {

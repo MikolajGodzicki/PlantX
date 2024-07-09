@@ -1,7 +1,9 @@
 ﻿using PlantX.Data;
+using PlantX.Locale;
 using PlantX.MVVM.Models.Fields;
 using PlantX.MVVM.Models.Pesticides;
 using PlantX.MVVM.Models.Plants;
+using PlantX.Notifications;
 using PlantX.Utils;
 using System;
 using System.Collections.Generic;
@@ -10,6 +12,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace PlantX.MVVM.ViewModels.Raports {
 	class RaportCreatorViewModel : NotifyPropertyBase {
@@ -28,7 +31,6 @@ namespace PlantX.MVVM.ViewModels.Raports {
 		public ObservableCollection<Pesticide> AvailablePesticides { get => PlantX_API.AvailablePesticides; }
 
 		private Pesticide selectedAddPesticide;
-
 		public Pesticide SelectedAddPesticide {
 			get => selectedAddPesticide;
 			set {
@@ -39,7 +41,6 @@ namespace PlantX.MVVM.ViewModels.Raports {
 		}
 
 		private Field selectedField;
-
 		public Field SelectedField {
 			get => selectedField;
 			set {
@@ -49,8 +50,23 @@ namespace PlantX.MVVM.ViewModels.Raports {
 			}
 		}
 
+		private int selectedPesticideIndex;
+		public int SelectedPesticideIndex {
+			get => selectedPesticideIndex;
+			set {
+				selectedPesticideIndex = value;
+				OnPropertyChanged();
+			}
+		}
+
+		public RelayCommand RemovePesticideCommand { get; set; }
+
 		public RaportCreatorViewModel() {
 			Pesticides = new ObservableCollection<PesticideAreaRelation>();
+
+			RemovePesticideCommand = new RelayCommand(e => {
+				RemovePesticide(SelectedPesticideIndex);
+			});
 		}
 
 		private void AddPesticide(Pesticide selectedPesticide) {
@@ -59,6 +75,16 @@ namespace PlantX.MVVM.ViewModels.Raports {
 				Field = SelectedField
 			};
 			Pesticides.Add(convertedPesticide);
+		}
+
+		private void RemovePesticide(int index) {
+			int count = Pesticides.Count;
+			if (index < count || index >= count) {
+				NotificationsManager.ShowError(Locale_PL.Raport_WrongPesticideIndex);
+				return;
+			}
+
+			Pesticides.RemoveAt(index);
 		}
 
 		private void RefreshDataGrid() {

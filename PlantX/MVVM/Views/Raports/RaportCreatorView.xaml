@@ -94,7 +94,7 @@
                           AutoGenerateColumns="False"
                           ItemsSource="{Binding Pesticides}"
                           IsReadOnly="True"
-                          SelectedItem="{Binding SelectedPesticide}">
+                          SelectedIndex="{Binding SelectedPesticideIndex}">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Pestycydy"
                                             Binding="{Binding Pesticide.Name}" />
