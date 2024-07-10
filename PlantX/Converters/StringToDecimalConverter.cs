@@ -22,7 +22,9 @@ namespace PlantX.Converters {
 			if (string.IsNullOrEmpty(value as string))
 				return 0;
 
-			if (decimal.TryParse(value as string, out decimal result))
+			string valAsString = value as string;
+			valAsString = valAsString.Replace('.', ',');
+			if (decimal.TryParse(valAsString, out decimal result))
 				return result;
 
 			return 0; // Wartość domyślna, jeśli konwersja się nie powiodła

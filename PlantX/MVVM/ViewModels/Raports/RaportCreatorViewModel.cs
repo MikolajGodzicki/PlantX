@@ -79,7 +79,7 @@ namespace PlantX.MVVM.ViewModels.Raports {
 
 		private void RemovePesticide(int index) {
 			int count = Pesticides.Count;
-			if (index < count || index >= count) {
+			if (index < 0 || index >= count) {
 				NotificationsManager.ShowError(Locale_PL.Raport_WrongPesticideIndex);
 				return;
 			}

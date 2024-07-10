@@ -29,8 +29,7 @@
                     <DataGridTextColumn Header="Dostępne pestycydy"
                                         Binding="{Binding Name}" />
                     <DataGridTextColumn Header="Moc pestycydu"
-                                        Binding="{Binding Weight}" />
-                    <DataGridTextColumn Binding="{Binding WeightType, Converter={StaticResource EnumToSelectedStringConverter}}" />
+                                        Binding="{Binding ., Converter={StaticResource EnumToSelectedStringConverter}}" />
                 </DataGrid.Columns>
 
             </DataGrid>

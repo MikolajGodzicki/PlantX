@@ -114,7 +114,13 @@ namespace PlantX.MVVM.ViewModels.Pesticides {
 			pesticideToEdit.Weight = CurrentPesticideWeight;
 			pesticideToEdit.WeightType = SelectedPesticideType;
 
+			RefreshDataGrid();
+
 			NotificationsManager.ShowSuccess(Locale_PL.Pesticide_Edited);
+		}
+
+		private void RefreshDataGrid() {
+			AvailablePesticides = new ObservableCollection<Pesticide>(PlantX_API.AvailablePesticides);
 		}
 
 		private void SetWeightType(WeightType pesticideType) {

@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:PlantX.MVVM.Views.Fields"
              xmlns:controls="clr-namespace:PlantX.Controls"
              mc:Ignorable="d"
              d:DesignHeight="900" d:DesignWidth="800">
@@ -28,8 +27,8 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Dostępne pola"
                                         Binding="{Binding Name}" />
-                    <DataGridTextColumn Header="Powierzchnia (Ary)"
-                                        Binding="{Binding Area}" />
+                    <DataGridTextColumn Header="Powierzchnia"
+                                        Binding="{Binding Area, Converter={StaticResource IntToAreaConverter}}" />
                 </DataGrid.Columns>
 
             </DataGrid>

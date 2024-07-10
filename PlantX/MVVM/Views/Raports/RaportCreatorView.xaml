@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:PlantX.MVVM.Views.Raports"
              xmlns:controls="clr-namespace:PlantX.Controls"
              mc:Ignorable="d"
              d:DesignHeight="830"
@@ -98,8 +97,7 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Pestycydy"
                                             Binding="{Binding Pesticide.Name}" />
-                        <DataGridTextColumn Binding="{Binding CalculatedWeight}" />
-                        <DataGridTextColumn Binding="{Binding PesticideWeightType}" />
+                        <DataGridTextColumn Binding="{Binding ., Converter={StaticResource DecimalToWeightTypesConverter}}" />
                     </DataGrid.Columns>
                 </DataGrid>
             </Border>

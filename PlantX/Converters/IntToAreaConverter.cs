@@ -5,27 +5,23 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Data;
 
 namespace PlantX.Converters {
-	public class EnumToSelectedStringConverter : IValueConverter {
+	public class IntToAreaConverter : IValueConverter {
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
 			if (value == null)
 				return string.Empty;
 
-			if (value is Pesticide pesticide) {
-				switch (pesticide.WeightType) {
-					case WeightType.Kilogram:
-						return $"{pesticide.Weight} Kg/Ha";
-					case WeightType.Liter:
-						return $"{pesticide.Weight} L/Ha";
-					default:
-						return string.Empty;
+			if (value is int area) {
+				if (area >= 100) {
+					return $"{(decimal)area / 100} Ha";
+				} else {
+					return $"{area} A";
 				}
 			}
 
-			return string.Empty;
+			return value;
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {

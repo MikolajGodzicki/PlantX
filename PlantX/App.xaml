@@ -63,7 +63,9 @@
             <converters:EnumConverter x:Key="EnumConverter" />
             <converters:StringToIntConverter x:Key="StringToIntConverter" />
             <converters:StringToDecimalConverter x:Key="StringToDecimalConverter" />
-            <converters:EnumToSelectedStringConverter x:Key="EnumToSelectedStringConverter" />
+            <converters:EnumToSelectedStringConverter x:Key="EnumToSelectedStringConverter" /> 
+            <converters:DecimalToWeightTypesConverter x:Key="DecimalToWeightTypesConverter" />
+            <converters:IntToAreaConverter x:Key="IntToAreaConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

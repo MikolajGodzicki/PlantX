@@ -5,27 +5,39 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Data;
 
 namespace PlantX.Converters {
-	public class EnumToSelectedStringConverter : IValueConverter {
+	public class DecimalToWeightTypesConverter : IValueConverter{
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
 			if (value == null)
 				return string.Empty;
 
-			if (value is Pesticide pesticide) {
+
+			if (value is PesticideAreaRelation item) {
+				Pesticide pesticide = item.Pesticide;
+				decimal weight = item.CalculatedWeight;
 				switch (pesticide.WeightType) {
-					case WeightType.Kilogram:
-						return $"{pesticide.Weight} Kg/Ha";
 					case WeightType.Liter:
-						return $"{pesticide.Weight} L/Ha";
+						if (weight >= 1) {
+							return $"{weight} L";
+						} else {
+							return $"{weight * 1000} ml";
+						}
+
+					case WeightType.Kilogram:
+						if (weight >= 1) {
+							return $"{weight} kg";
+						} else {
+							return $"{weight * 1000} g";
+						}
+
 					default:
-						return string.Empty;
+						return weight.ToString();
 				}
 			}
 
-			return string.Empty;
+			return value;
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {
