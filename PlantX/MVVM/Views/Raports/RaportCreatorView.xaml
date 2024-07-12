@@ -28,7 +28,7 @@
                                        Margin="30,0,5,30"
                                        Placeholder="Pryskanie u taty"
                                        Style="{DynamicResource FormInput}"
-                                       Text="{Binding CurrentFieldName, UpdateSourceTrigger=PropertyChanged}" />
+                                       Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" />
 
 
             <TextBlock Text="Obszar polny"
@@ -58,8 +58,9 @@
                       Height="40"
                       VerticalContentAlignment="Center"
                       HorizontalAlignment="Left"
-                      Margin="30,0,5,30" 
+                      Margin="30,0,5,30"
                       ItemsSource="{Binding Plants}"
+                      SelectedItem="{Binding SelectedPlant, UpdateSourceTrigger=PropertyChanged}"
                       DisplayMemberPath="Name"/>
 
             <TextBlock Text="Data"
@@ -72,7 +73,8 @@
                         Height="40"
                         VerticalContentAlignment="Center"
                         HorizontalAlignment="Left"
-                        Margin="30,0,5,50" />
+                        Margin="30,0,5,50" 
+                        SelectedDate="{Binding SelectedDate, UpdateSourceTrigger=PropertyChanged}"/>
 
         </StackPanel>
 
@@ -93,7 +95,7 @@
                           AutoGenerateColumns="False"
                           ItemsSource="{Binding Pesticides}"
                           IsReadOnly="True"
-                          SelectedIndex="{Binding SelectedPesticideIndex}">
+                          SelectedItem="{Binding SelectedPesticide}">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Pestycydy"
                                             Binding="{Binding Pesticide.Name}" />

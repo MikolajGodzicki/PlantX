@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlantX", "PlantX\PlantX.csp
 EndProject
 Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "PlantX_Setup", "PlantX_Setup\PlantX_Setup.aiproj", "{7CC63E76-8B39-45A5-96FC-2561F2A81002}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlantX.PDFTest", "PlantX.PDFTest\PlantX.PDFTest.csproj", "{2B92EC4C-5B54-4FC7-81B6-73E1EF070848}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
@@ -26,6 +28,12 @@ Global
 		{7CC63E76-8B39-45A5-96FC-2561F2A81002}.Debug|Any CPU.Build.0 = DefaultBuild
 		{7CC63E76-8B39-45A5-96FC-2561F2A81002}.Release|Any CPU.ActiveCfg = DefaultBuild
 		{7CC63E76-8B39-45A5-96FC-2561F2A81002}.Release|Any CPU.Build.0 = DefaultBuild
+		{2B92EC4C-5B54-4FC7-81B6-73E1EF070848}.All|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B92EC4C-5B54-4FC7-81B6-73E1EF070848}.All|Any CPU.Build.0 = Debug|Any CPU
+		{2B92EC4C-5B54-4FC7-81B6-73E1EF070848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B92EC4C-5B54-4FC7-81B6-73E1EF070848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B92EC4C-5B54-4FC7-81B6-73E1EF070848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B92EC4C-5B54-4FC7-81B6-73E1EF070848}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

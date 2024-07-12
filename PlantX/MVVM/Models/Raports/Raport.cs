@@ -52,9 +52,9 @@ namespace PlantX.MVVM.Models.Raports {
 			}
 		}
 
-		private ObservableCollection<Pesticide> pesticides;
+		private ObservableCollection<PesticideAreaRelation> pesticides;
 
-		public ObservableCollection<Pesticide> Pesticides {
+		public ObservableCollection<PesticideAreaRelation> Pesticides {
 			get { return pesticides; }
 			set {
 				pesticides = value;

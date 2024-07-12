@@ -29,5 +29,16 @@ namespace PlantX.Locale
 		public const string Plant_Edited = "Zmieniono roślinę.";
 
 		public const string Raport_WrongPesticideIndex = "Wybrano złą pozycje.";
+		public const string Raport_PesticideExists = "Nie możesz dodać tego samego pestycydu.";
+		public const string Raport_WrongTitle = "Tytuł nie może być pusty.";
+		public const string Raport_FieldNotSelected = "Nie wybrano obszaru polnego.";
+		public const string Raport_PlantNotSelected = "Nie wybrano rośliny.";
+		public const string Raport_PesticideBelowOne = "Musi być dodany co najmniej jeden pestycyd.";
+		public const string Raport_Created = "Utworzono raport.";
+		public const string Raport_NotExists = "Taki raport nie istnieje.";
+		public const string Raport_Removed = "Usunięto raport.";
+		public const string Raport_PesticideRemoved = "Usunięto pestycyd.";
+		public const string Raport_PesticideAdded = "Dodano pestycyd.";
+		public const string Raport_PesticideNotExists = "Taki pestycyd nie istnieje.";
 	}
 }

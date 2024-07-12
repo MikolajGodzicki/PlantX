@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PlantX.MVVM.Models.Pesticides
 {
-    class PesticideAreaRelation {
+    public class PesticideAreaRelation {
         public Pesticide Pesticide { get; set; }
         public Field Field { get; set; }
 

@@ -1,14 +1,90 @@
 ﻿<UserControl x:Class="PlantX.MVVM.Views.Raports.ShowRaportsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:PlantX.MVVM.Views.Raports"
              xmlns:controls="clr-namespace:PlantX.Controls"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d"
+             d:DesignHeight="900"
+             d:DesignWidth="800">
     <Grid>
-        <TextBlock>Show raports</TextBlock>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition />
+            <RowDefinition Height="300" />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Margin="16"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   FontFamily="/Fonts/#Inter">
+                Wszystkie raporty
+        </TextBlock>
+        <Border BorderThickness="2"
+                BorderBrush="#E0E0E0"
+                CornerRadius="5"
+                Grid.Row="1">
+            <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderModern}"
+                      RowStyle="{DynamicResource DataGridRowModern}"
+                      CellStyle="{DynamicResource DataGridCellModern}"
+                      Style="{DynamicResource DataGridModern}"
+                      AutoGenerateColumns="False"
+                      ItemsSource="{Binding AvailableRaports}"
+                      IsReadOnly="True"
+                      SelectedItem="{Binding SelectedRaport}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Tytuł"
+                                        Binding="{Binding Title}" />
+                    <DataGridTextColumn Header="Obszar polny"
+                                        Binding="{Binding Field.Name}" />
+                    <DataGridTextColumn Header="Roślina"
+                                        Binding="{Binding Plant.Name}" />
+                    <DataGridTextColumn Header="Data działań"
+                                        Binding="{Binding CreationDate}" />
+                </DataGrid.Columns>
+
+            </DataGrid>
+        </Border>
+
+        <Border BorderThickness="2"
+                BorderBrush="#E0E0E0"
+                CornerRadius="5"
+                Grid.Row="2"
+                Margin="0,10,0,0">
+            <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderModern}"
+                      RowStyle="{DynamicResource DataGridRowModern}"
+                      CellStyle="{DynamicResource DataGridCellModern}"
+                      Style="{DynamicResource DataGridModern}"
+                      AutoGenerateColumns="False"
+                      ItemsSource="{Binding Pesticides}"
+                      IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Pestycydy"
+                                        Binding="{Binding Pesticide.Name}" />
+                    <DataGridTextColumn Binding="{Binding ., Converter={StaticResource DecimalToWeightTypesConverter}}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="3">
+            <Button Width="235"
+                    HorizontalAlignment="Left"
+                    Content="Usuń wybrany raport"
+                    Margin="30,0,0,0"
+                    Grid.Row="3"
+                    Style="{DynamicResource FormButton}"
+                    Command="{Binding RemoveRaportCommand}" />
+            <Button Width="315"
+                    HorizontalAlignment="Left"
+                    Content="Konwertuj wybrany raport na PDF"
+                    Margin="30,0,0,0"
+                    Grid.Row="3"
+                    Style="{DynamicResource FormButton}"
+                    Command="{Binding CreatePDFCommand}" />
+        </StackPanel>
+
     </Grid>
 </UserControl>
