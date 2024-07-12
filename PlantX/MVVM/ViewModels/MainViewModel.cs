@@ -1,4 +1,5 @@
-﻿using PlantX.MVVM.ViewModels.Fields;
+﻿using PlantX.Data;
+using PlantX.MVVM.ViewModels.Fields;
 using PlantX.MVVM.ViewModels.Pesticides;
 using PlantX.MVVM.ViewModels.Plants;
 using PlantX.MVVM.ViewModels.Raports;
@@ -35,8 +36,9 @@ namespace PlantX.MVVM.ViewModels {
 			}
 		}
 
-		public MainViewModel()
-        {
+		public MainViewModel() {
+			PlantX_API.Initialize();
+
 			InitializeViewModels();
 
 			InitializeCommands();

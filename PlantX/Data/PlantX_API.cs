@@ -5,9 +5,11 @@ using PlantX.MVVM.Models.Raports;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace PlantX.Data
 {
@@ -27,6 +29,24 @@ namespace PlantX.Data
 		}
 		public static Plant? GetPlantById(Guid ID) {
 			return AvailablePlants.FirstOrDefault(e => e.Id == ID);
+		}
+
+		public static void Initialize() {
+			string appdataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+			string fulldataPath = $"{appdataPath}\\.PlantX\\data";
+
+			if (!Directory.Exists(fulldataPath)) {
+				Directory.CreateDirectory(fulldataPath);
+			}
+
+			string[] files = ["plants.plx", "pesticides.plx", "fields.plx", "raports.plx"];
+
+			foreach (string file in files) {
+				string filePath = Path.Combine(fulldataPath, file);
+				if (!File.Exists(filePath)) {
+					File.Create(filePath);
+				}
+			}
 		}
 	}
 }
