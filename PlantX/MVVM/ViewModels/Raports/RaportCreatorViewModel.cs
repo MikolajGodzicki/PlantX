@@ -172,6 +172,8 @@ namespace PlantX.MVVM.ViewModels.Raports {
 			Pesticides = new ObservableCollection<PesticideAreaRelation>();
 			SelectedField = null;
 			SelectedPlant = null;
+			SelectedDate = DateTime.Now;
+			Title = String.Empty;
 
 			PlantX_API.Raports.Add(raport);
 			NotificationsManager.ShowSuccess(Locale_PL.Raport_Created);

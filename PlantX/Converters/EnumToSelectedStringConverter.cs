@@ -15,14 +15,7 @@ namespace PlantX.Converters {
 				return string.Empty;
 
 			if (value is Pesticide pesticide) {
-				switch (pesticide.WeightType) {
-					case WeightType.Kilogram:
-						return $"{pesticide.Weight} Kg/Ha";
-					case WeightType.Liter:
-						return $"{pesticide.Weight} L/Ha";
-					default:
-						return string.Empty;
-				}
+				return WeightConverter.GetConvertedWeight(pesticide, pesticide.Weight) + "/Ha";
 			}
 
 			return string.Empty;

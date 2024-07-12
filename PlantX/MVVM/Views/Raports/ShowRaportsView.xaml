@@ -42,7 +42,7 @@
                     <DataGridTextColumn Header="Roślina"
                                         Binding="{Binding Plant.Name}" />
                     <DataGridTextColumn Header="Data działań"
-                                        Binding="{Binding CreationDate}" />
+                                        Binding="{Binding CreationDate, StringFormat='dd.MM.yyyy'}" />
                 </DataGrid.Columns>
 
             </DataGrid>

@@ -17,24 +17,8 @@ namespace PlantX.Converters {
 			if (value is PesticideAreaRelation item) {
 				Pesticide pesticide = item.Pesticide;
 				decimal weight = item.CalculatedWeight;
-				switch (pesticide.WeightType) {
-					case WeightType.Liter:
-						if (weight >= 1) {
-							return $"{weight} L";
-						} else {
-							return $"{weight * 1000} ml";
-						}
-
-					case WeightType.Kilogram:
-						if (weight >= 1) {
-							return $"{weight} kg";
-						} else {
-							return $"{weight * 1000} g";
-						}
-
-					default:
-						return weight.ToString();
-				}
+				
+				return WeightConverter.GetConvertedWeight(pesticide, weight);
 			}
 
 			return value;

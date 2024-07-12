@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,7 @@ namespace PlantX.Locale
 		public const string Plant_Created = "Utworzono roślinę.";
 		public const string Plant_Edited = "Zmieniono roślinę.";
 
-		public const string Raport_WrongPesticideIndex = "Wybrano złą pozycje.";
+		public const string Raport_WrongIndex = "Wybrano złą pozycje.";
 		public const string Raport_PesticideExists = "Nie możesz dodać tego samego pestycydu.";
 		public const string Raport_WrongTitle = "Tytuł nie może być pusty.";
 		public const string Raport_FieldNotSelected = "Nie wybrano obszaru polnego.";
@@ -40,5 +41,6 @@ namespace PlantX.Locale
 		public const string Raport_PesticideRemoved = "Usunięto pestycyd.";
 		public const string Raport_PesticideAdded = "Dodano pestycyd.";
 		public const string Raport_PesticideNotExists = "Taki pestycyd nie istnieje.";
+		public const string Raport_PDFCreated = "Pomyślnie utworzono raport PDF.";
 	}
 }
