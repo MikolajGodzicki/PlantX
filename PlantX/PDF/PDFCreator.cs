@@ -8,14 +8,7 @@ using iText.Layout.Element;
 using iText.Layout.Properties;
 using Microsoft.Win32;
 using PlantX.Converters;
-using PlantX.MVVM.Models.Pesticides;
 using PlantX.MVVM.Models.Raports;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media.Media3D;
 
 namespace PlantX.PDF {
 	public class PDFCreator {
@@ -27,11 +20,11 @@ namespace PlantX.PDF {
 			if (saveFileDialog.ShowDialog() == true) {
 				PdfWriter pdfWriter = new PdfWriter(saveFileDialog.FileName);
 				PdfDocument pdfDocument = new PdfDocument(pdfWriter);
-				
+
 				PdfFont font = PdfFontFactory.CreateFont(StandardFonts.HELVETICA, PdfEncodings.CP1250);
 
 				Document document = new Document(pdfDocument).SetFont(font).SetFontSize(16);
-				
+
 				ImageData imageData = ImageDataFactory.Create("./PDF/Logo.png");
 				Image image = new Image(imageData).SetHorizontalAlignment(HorizontalAlignment.RIGHT).SetWidth(64).SetHeight(64);
 				document.Add(image);

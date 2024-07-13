@@ -1,15 +1,6 @@
-﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PlantX.Locale
-{
-    public class Locale_PL
-    {
-        public const string Pesticide_NameRequired = "Podaj nazwę pestycydu.";
+﻿namespace PlantX.Locale {
+	public class Locale_PL {
+		public const string Pesticide_NameRequired = "Podaj nazwę pestycydu.";
 		public const string Pesticide_Exists = "Pestycyd o takiej nazwie już istnieje.";
 		public const string Pesticide_NotExists = "Pestycyd o takiej nazwie nie istnieje.";
 		public const string Pesticide_WeightGreaterThanZero = "Moc musi być większa od 0.";

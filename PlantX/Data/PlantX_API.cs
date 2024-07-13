@@ -3,17 +3,10 @@ using PlantX.MVVM.Models.Fields;
 using PlantX.MVVM.Models.Pesticides;
 using PlantX.MVVM.Models.Plants;
 using PlantX.MVVM.Models.Raports;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 
-namespace PlantX.Data
-{
+namespace PlantX.Data {
 	public sealed class PlantX_API {
 		static string[] files = ["plants.plx", "pesticides.plx", "fields.plx", "raports.plx"];
 

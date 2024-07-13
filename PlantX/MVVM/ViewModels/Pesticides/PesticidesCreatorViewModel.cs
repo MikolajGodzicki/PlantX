@@ -1,15 +1,8 @@
-﻿using Notification.Wpf;
-using PlantX.Data;
+﻿using PlantX.Data;
 using PlantX.Locale;
 using PlantX.MVVM.Models.Pesticides;
-using PlantX.MVVM.Models.Plants;
 using PlantX.Notifications;
 using PlantX.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PlantX.MVVM.ViewModels.Pesticides {
 	class PesticidesCreatorViewModel : NotifyPropertyBase {

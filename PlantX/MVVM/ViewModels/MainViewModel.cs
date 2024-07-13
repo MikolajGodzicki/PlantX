@@ -4,12 +4,6 @@ using PlantX.MVVM.ViewModels.Pesticides;
 using PlantX.MVVM.ViewModels.Plants;
 using PlantX.MVVM.ViewModels.Raports;
 using PlantX.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace PlantX.MVVM.ViewModels {
 	internal class MainViewModel : NotifyPropertyBase {
@@ -29,8 +23,8 @@ namespace PlantX.MVVM.ViewModels {
 		private object currentView;
 
 		public object CurrentView {
-			get => currentView; 
-			set { 
+			get => currentView;
+			set {
 				currentView = value;
 				OnPropertyChanged();
 			}
@@ -53,7 +47,7 @@ namespace PlantX.MVVM.ViewModels {
 
 			SetCurrentViewModel(plantsVM);
 		}
-		
+
 		private void InitializeCommands() {
 			PlantsCommand = new RelayCommand(e => {
 				SetCurrentViewModel(plantsVM);

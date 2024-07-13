@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows;
-using System.Diagnostics;
 
-namespace PlantX.Controls
-{
-    class FormInputControl : TextBox {
+namespace PlantX.Controls {
+	class FormInputControl : TextBox {
 		static FormInputControl() {
 			DefaultStyleKeyProperty.OverrideMetadata(typeof(FormInputControl), new FrameworkPropertyMetadata(typeof(FormInputControl)));
 		}

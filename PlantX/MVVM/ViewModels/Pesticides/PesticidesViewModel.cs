@@ -1,10 +1,4 @@
-﻿using PlantX.MVVM.ViewModels.Plants;
-using PlantX.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PlantX.Utils;
 
 namespace PlantX.MVVM.ViewModels.Pesticides {
 	class PesticidesViewModel : NotifyPropertyBase {

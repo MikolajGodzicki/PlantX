@@ -3,11 +3,6 @@ using PlantX.Locale;
 using PlantX.MVVM.Models.Plants;
 using PlantX.Notifications;
 using PlantX.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PlantX.MVVM.ViewModels.Plants {
 	class PlantsCreatorViewModel : NotifyPropertyBase {
@@ -23,14 +18,13 @@ namespace PlantX.MVVM.ViewModels.Plants {
 
 		public RelayCommand AddPlantCommand { get; set; }
 
-		public PlantsCreatorViewModel()
-        {
+		public PlantsCreatorViewModel() {
 			AddPlantCommand = new RelayCommand(e => {
 				AddPlant();
 			});
-        }
+		}
 
-        private void AddPlant() {
+		private void AddPlant() {
 			if (string.IsNullOrEmpty(CurrentPlantName)) {
 				NotificationsManager.ShowError(Locale_PL.Plant_NameRequired);
 				return;
@@ -48,5 +42,5 @@ namespace PlantX.MVVM.ViewModels.Plants {
 
 			NotificationsManager.ShowSuccess(Locale_PL.Plant_Created);
 		}
-    }
+	}
 }

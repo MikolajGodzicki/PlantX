@@ -1,14 +1,9 @@
 ﻿using PlantX.MVVM.Models.Pesticides;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Data;
 
 namespace PlantX.Converters {
-	public class DecimalToWeightTypesConverter : IValueConverter{
+	public class DecimalToWeightTypesConverter : IValueConverter {
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
 			if (value == null)
 				return string.Empty;
@@ -17,7 +12,7 @@ namespace PlantX.Converters {
 			if (value is PesticideAreaRelation item) {
 				Pesticide pesticide = item.Pesticide;
 				decimal weight = item.CalculatedWeight;
-				
+
 				return WeightConverter.GetConvertedWeight(pesticide, weight);
 			}
 

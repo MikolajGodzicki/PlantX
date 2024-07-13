@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace PlantX.Controls
-{
-    class FormFloatNumberInputControl : FormInputControl {
+namespace PlantX.Controls {
+	class FormFloatNumberInputControl : FormInputControl {
 		public FormFloatNumberInputControl() : base() {
 			this.PreviewTextInput += OnPreviewTextInput;
 			this.PreviewKeyDown += OnPreviewKeyDown;

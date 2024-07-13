@@ -6,14 +6,7 @@ using PlantX.MVVM.Models.Plants;
 using PlantX.MVVM.Models.Raports;
 using PlantX.Notifications;
 using PlantX.Utils;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace PlantX.MVVM.ViewModels.Raports {
 	class RaportCreatorViewModel : NotifyPropertyBase {
@@ -34,7 +27,7 @@ namespace PlantX.MVVM.ViewModels.Raports {
 		private string title;
 
 		public string Title {
-			get => title; 
+			get => title;
 			set {
 				title = value;
 				OnPropertyChanged();

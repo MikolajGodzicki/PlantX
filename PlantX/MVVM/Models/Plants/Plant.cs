@@ -1,9 +1,4 @@
 ﻿using PlantX.MVVM.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PlantX.MVVM.Models.Plants {
 	public class Plant : NotifyPropertyBase {
@@ -12,7 +7,7 @@ namespace PlantX.MVVM.Models.Plants {
 
 		private string name;
 		public string Name {
-			get => name; 
+			get => name;
 			set {
 				name = value;
 				OnPropertyChanged();

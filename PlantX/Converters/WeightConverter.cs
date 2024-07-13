@@ -1,9 +1,4 @@
 ﻿using PlantX.MVVM.Models.Pesticides;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PlantX.Converters {
 	public class WeightConverter {
