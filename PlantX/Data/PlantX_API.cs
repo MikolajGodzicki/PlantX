@@ -1,4 +1,5 @@
-﻿using PlantX.MVVM.Models.Fields;
+﻿using Newtonsoft.Json;
+using PlantX.MVVM.Models.Fields;
 using PlantX.MVVM.Models.Pesticides;
 using PlantX.MVVM.Models.Plants;
 using PlantX.MVVM.Models.Raports;
@@ -14,11 +15,14 @@ using System.Web;
 namespace PlantX.Data
 {
 	public sealed class PlantX_API {
-		public static ObservableCollection<Plant> AvailablePlants = [new Plant("Koper"), new Plant("Natka")];
-		public static ObservableCollection<Pesticide> AvailablePesticides = [new Pesticide("Stomp", 10, WeightType.Liter), new Pesticide("Amistar", 20, WeightType.Kilogram)];
-		public static ObservableCollection<Field> AvailableFields = [new Field("U taty", 100), new Field("Byce", 50)];
+		static string[] files = ["plants.plx", "pesticides.plx", "fields.plx", "raports.plx"];
 
-		public static ObservableCollection<Raport> Raports = new ObservableCollection<Raport>();
+
+		public static ObservableCollection<Plant> AvailablePlants = default!;
+		public static ObservableCollection<Pesticide> AvailablePesticides = default!;
+		public static ObservableCollection<Field> AvailableFields = default!;
+
+		public static ObservableCollection<Raport> Raports = default!;
 
 		public static Field? GetFieldById(Guid ID) {
 			return AvailableFields.FirstOrDefault(e => e.Id == ID);
@@ -32,14 +36,11 @@ namespace PlantX.Data
 		}
 
 		public static void Initialize() {
-			string appdataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-			string fulldataPath = $"{appdataPath}\\.PlantX\\data";
+			string fulldataPath = GetFullPath();
 
 			if (!Directory.Exists(fulldataPath)) {
 				Directory.CreateDirectory(fulldataPath);
 			}
-
-			string[] files = ["plants.plx", "pesticides.plx", "fields.plx", "raports.plx"];
 
 			foreach (string file in files) {
 				string filePath = Path.Combine(fulldataPath, file);
@@ -47,6 +48,43 @@ namespace PlantX.Data
 					File.Create(filePath);
 				}
 			}
+
+			AvailablePlants = GetFileCollection<Plant>(File.ReadAllText(Path.Combine(fulldataPath, files[0])));
+			AvailablePesticides = GetFileCollection<Pesticide>(File.ReadAllText(Path.Combine(fulldataPath, files[1])));
+			AvailableFields = GetFileCollection<Field>(File.ReadAllText(Path.Combine(fulldataPath, files[2])));
+			Raports = GetFileCollection<Raport>(File.ReadAllText(Path.Combine(fulldataPath, files[3])));
+		}
+
+		public static void Save() {
+			string fulldataPath = GetFullPath();
+
+			SaveCollectionToFile(AvailablePlants, Path.Combine(fulldataPath, files[0]));
+			SaveCollectionToFile(AvailablePesticides, Path.Combine(fulldataPath, files[1]));
+			SaveCollectionToFile(AvailableFields, Path.Combine(fulldataPath, files[2]));
+			SaveCollectionToFile(Raports, Path.Combine(fulldataPath, files[3]));
+		}
+
+		private static string GetFullPath() {
+			string appdataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+			string fulldataPath = $"{appdataPath}\\.PlantX\\data";
+
+			return fulldataPath;
+		}
+
+		private static void SaveCollectionToFile<T>(ObservableCollection<T> objectToSave, string filePath) {
+			var content = JsonConvert.SerializeObject(objectToSave);
+
+			File.WriteAllText(filePath, content);
+		}
+
+		private static ObservableCollection<T> GetFileCollection<T>(string fileContent) {
+			var collection = JsonConvert.DeserializeObject<ObservableCollection<T>>(fileContent);
+
+			if (collection is null) {
+				return new ObservableCollection<T>();
+			}
+
+			return collection;
 		}
 	}
 }

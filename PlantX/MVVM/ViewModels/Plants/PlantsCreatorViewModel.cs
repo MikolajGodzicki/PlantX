@@ -44,6 +44,8 @@ namespace PlantX.MVVM.ViewModels.Plants {
 			Plant plant = new Plant(CurrentPlantName);
 			PlantX_API.AvailablePlants.Add(plant);
 
+			CurrentPlantName = string.Empty;
+
 			NotificationsManager.ShowSuccess(Locale_PL.Plant_Created);
 		}
     }

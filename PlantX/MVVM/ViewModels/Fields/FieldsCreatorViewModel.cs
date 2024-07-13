@@ -61,6 +61,9 @@ namespace PlantX.MVVM.ViewModels.Fields
 			Field field = new Field(CurrentFieldName, Convert.ToInt32(CurrentFieldArea));
 			PlantX_API.AvailableFields.Add(field);
 
+			CurrentFieldName = string.Empty;
+			CurrentFieldArea = default;
+
 			NotificationsManager.ShowSuccess(Locale_PL.Field_Created);
 		}
 	}

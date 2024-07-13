@@ -98,6 +98,9 @@ namespace PlantX.MVVM.ViewModels.Pesticides {
 			Pesticide pesticide = new Pesticide(CurrentPesticideName, CurrentPesticideWeight, SelectedPesticideType);
 			PlantX_API.AvailablePesticides.Add(pesticide);
 
+			CurrentPesticideName = string.Empty;
+			CurrentPesticideWeight = default;
+
 			NotificationsManager.ShowSuccess(Locale_PL.Pesticide_Created);
 		}
 	}
