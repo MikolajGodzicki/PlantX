@@ -70,6 +70,8 @@ namespace PlantX.MVVM.ViewModels.Raports {
 			}
 
 			AvailableRaports.Remove(SelectedRaport);
+			Pesticides = null;
+
 			NotificationsManager.ShowSuccess(Locale_PL.Raport_Removed);
 		}
 
