@@ -82,6 +82,11 @@ namespace PlantX.MVVM.ViewModels.Pesticides {
 		}
 
 		private void ChangePesticide() {
+			if (SelectedPesticide is null) {
+				NotificationsManager.ShowError(Locale_PL.Pesticide_WrongIndex);
+				return;
+			}
+
 			Pesticide? pesticideToEdit = PlantX_API.GetPesticideById(SelectedPesticide.Id);
 
 			if (pesticideToEdit is null) {

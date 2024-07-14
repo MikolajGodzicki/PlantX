@@ -2,18 +2,68 @@
 <DOCUMENT Type="Advanced Installer" CreateVersion="21.9" version="21.9" Modules="simple" RootPath="." Language="en" Id="{E1D7070A-A79D-4610-AEBF-A2D13AE98263}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_BouncyCastle.Cryptography.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Logo.png" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish\PDF"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.DotNet.PlatformAbstractions.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.DependencyInjection.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.DependencyModel.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Logging.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Options.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Primitives.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Xaml.Behaviors.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_NLog.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Notification.Wpf.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_PlantX.deps.json" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_PlantX.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_PlantX.exe" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_PlantX.runtimeconfig.json" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.barcodes.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.bouncycastleadapter.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.bouncycastleconnector.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.commons.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.forms.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.io.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.kernel.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.layout.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.pdfa.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.pdfua.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.sign.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.styledxmlparser.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_itext.svg.dll" Value="..\PlantX\bin\Release\net8.0-windows7.0\publish"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_BouncyCastle.Cryptography.dll" Value="BouncyCastle.Cryptography.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Logo.png" Value="Logo.png"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.DotNet.PlatformAbstractions.dll" Value="Microsoft.DotNet.PlatformAbstractions.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll" Value="Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyInjection.dll" Value="Microsoft.Extensions.DependencyInjection.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyModel.dll" Value="Microsoft.Extensions.DependencyModel.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll" Value="Microsoft.Extensions.Logging.Abstractions.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Logging.dll" Value="Microsoft.Extensions.Logging.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Options.dll" Value="Microsoft.Extensions.Options.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Primitives.dll" Value="Microsoft.Extensions.Primitives.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll" Value="Microsoft.Xaml.Behaviors.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_NLog.dll" Value="NLog.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll" Value="Newtonsoft.Json.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Notification.Wpf.dll" Value="Notification.Wpf.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PlantX.deps.json" Value="PlantX.deps.json"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PlantX.dll" Value="PlantX.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PlantX.exe" Value="PlantX.exe"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PlantX.runtimeconfig.json" Value="PlantX.runtimeconfig.json"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.barcodes.dll" Value="itext.barcodes.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.bouncycastleadapter.dll" Value="itext.bouncy-castle-adapter.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.bouncycastleconnector.dll" Value="itext.bouncy-castle-connector.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.commons.dll" Value="itext.commons.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.forms.dll" Value="itext.forms.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.io.dll" Value="itext.io.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.kernel.dll" Value="itext.kernel.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.layout.dll" Value="itext.layout.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.pdfa.dll" Value="itext.pdfa.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.pdfua.dll" Value="itext.pdfua.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.sign.dll" Value="itext.sign.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.styledxmlparser.dll" Value="itext.styledxmlparser.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_itext.svg.dll" Value="itext.svg.dll"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="Manufacturer" Value="MTech"/>
@@ -37,7 +87,9 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
     <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="PDF_Dir" Directory_Parent="PlantX_Dir" DefaultDir="PDF"/>
     <ROW Directory="PlantX_Dir" Directory_Parent="APPDIR" DefaultDir="PlantX"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.SideBySideGuidComponent">
@@ -46,9 +98,11 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="APPDIR" ComponentId="{AC21E66C-794F-45DD-BEAD-C066942EDDA7}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="PlantX_PrimaryOutput" ComponentId="{8CE5D81E-5D98-4C8F-9E82-C479D203EDD5}" Directory_="PlantX_Dir" Attributes="0" KeyPath="PlantX.dll"/>
-    <ROW Component="PlantX_PublishOutput" ComponentId="{7BAA85D4-FB87-4586-AE7C-0579BCBB21ED}" Directory_="PlantX_Dir" Attributes="0" KeyPath="PlantX.exe"/>
+    <ROW Component="PlantX_PrimaryOutput" ComponentId="{455ABA66-3B0C-402F-9DBC-ECE77F83D7ED}" Directory_="PlantX_Dir" Attributes="0" KeyPath="PlantX.dll"/>
+    <ROW Component="PlantX_PublishOutput" ComponentId="{6DB05F3B-FCCC-4FE3-9DA2-B6169BE92B09}" Directory_="PlantX_Dir" Attributes="0" KeyPath="PlantX.exe"/>
+    <ROW Component="PlantX_PublishOutput_PDF" ComponentId="{48F12237-AC16-4AEC-ACC9-E014A040BEE6}" Directory_="PDF_Dir" Attributes="0" KeyPath="Logo.png" Type="0"/>
     <ROW Component="ProductInformation" ComponentId="{F9EBBF07-39A0-4CD7-B332-B714DF0EC972}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{E4B48E9C-D062-403B-B437-79FED6347BE6}" Directory_="SHORTCUTDIR" Attributes="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -56,19 +110,69 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
     <ROW File="PlantX.dll" Component_="PlantX_PrimaryOutput" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_PlantX.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PlantX.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Xaml.Behaviors.dll" Component_="PlantX_PublishOutput" FileName="MICROS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Xaml.Behaviors.dll&gt;" SelfReg="false"/>
+    <ROW File="BouncyCastle.Cryptography.dll" Component_="PlantX_PublishOutput" FileName="BOUNCY~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_BouncyCastle.Cryptography.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_BouncyCastle.Cryptography.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.barcodes.dll" Component_="PlantX_PublishOutput" FileName="ITEXTB~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.barcodes.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.barcodes.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.bouncycastleadapter.dll" Component_="PlantX_PublishOutput" FileName="ITEXTB~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.bouncycastleadapter.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.bouncycastleadapter.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.bouncycastleconnector.dll" Component_="PlantX_PublishOutput" FileName="ITEXTB~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.bouncycastleconnector.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.bouncycastleconnector.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.commons.dll" Component_="PlantX_PublishOutput" FileName="ITEXTC~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.commons.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.commons.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.forms.dll" Component_="PlantX_PublishOutput" FileName="ITEXTF~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.forms.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.forms.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.io.dll" Component_="PlantX_PublishOutput" FileName="ITEXTI~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.io.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.io.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.kernel.dll" Component_="PlantX_PublishOutput" FileName="ITEXTK~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.kernel.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.kernel.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.layout.dll" Component_="PlantX_PublishOutput" FileName="ITEXTL~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.layout.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.layout.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.pdfa.dll" Component_="PlantX_PublishOutput" FileName="ITEXTP~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.pdfa.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.pdfa.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.pdfua.dll" Component_="PlantX_PublishOutput" FileName="ITEXTP~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.pdfua.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.pdfua.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.sign.dll" Component_="PlantX_PublishOutput" FileName="ITEXTS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.sign.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.sign.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.styledxmlparser.dll" Component_="PlantX_PublishOutput" FileName="ITEXTS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.styledxmlparser.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.styledxmlparser.dll&gt;" SelfReg="false"/>
+    <ROW File="itext.svg.dll" Component_="PlantX_PublishOutput" FileName="ITEXTS~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_itext.svg.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_itext.svg.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.DotNet.PlatformAbstractions.dll" Component_="PlantX_PublishOutput" FileName="MICROS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.DotNet.PlatformAbstractions.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.DotNet.PlatformAbstractions.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.DependencyInjection.Abstractions.dll" Component_="PlantX_PublishOutput" FileName="MICROS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.DependencyInjection.dll" Component_="PlantX_PublishOutput" FileName="MICROS~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyInjection.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.DependencyInjection.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.DependencyModel.dll" Component_="PlantX_PublishOutput" FileName="MICROS~5.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyModel.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.DependencyModel.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.Abstractions.dll" Component_="PlantX_PublishOutput" FileName="MICROS~6.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.dll" Component_="PlantX_PublishOutput" FileName="MICROS~7.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Logging.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.Logging.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Options.dll" Component_="PlantX_PublishOutput" FileName="MICROS~8.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Options.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.Options.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Primitives.dll" Component_="PlantX_PublishOutput" FileName="MICROS~9.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Primitives.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.Primitives.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Xaml.Behaviors.dll" Component_="PlantX_PublishOutput" FileName="MICRO~10.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Xaml.Behaviors.dll&gt;" SelfReg="false"/>
+    <ROW File="Newtonsoft.Json.dll" Component_="PlantX_PublishOutput" FileName="NEWTON~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Newtonsoft.Json.dll&gt;" SelfReg="false"/>
+    <ROW File="NLog.dll" Component_="PlantX_PublishOutput" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_NLog.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_NLog.dll&gt;" SelfReg="false"/>
     <ROW File="Notification.Wpf.dll" Component_="PlantX_PublishOutput" FileName="NOTIFI~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Notification.Wpf.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Notification.Wpf.dll&gt;" SelfReg="false"/>
     <ROW File="PlantX.deps.json" Component_="PlantX_PublishOutput" FileName="PLANTX~2.JSO|[|AI_PROPPATH_FILENAME_PERBUILD_PlantX.deps.json]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PlantX.deps.json&gt;" SelfReg="false"/>
     <ROW File="PlantX.exe" Component_="PlantX_PublishOutput" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_PlantX.exe]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PlantX.exe&gt;" SelfReg="false" DigSign="true"/>
     <ROW File="PlantX.runtimeconfig.json" Component_="PlantX_PublishOutput" FileName="PLANTX~3.JSO|[|AI_PROPPATH_FILENAME_PERBUILD_PlantX.runtimeconfig.json]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PlantX.runtimeconfig.json&gt;" SelfReg="false"/>
+    <ROW File="Logo.png" Component_="PlantX_PublishOutput_PDF" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_Logo.png]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Logo.png&gt;" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
+    <ROW Name="AI_APPPATH_PERBUILD_BouncyCastle.Cryptography.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_BouncyCastle.Cryptography.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_BouncyCastle.Cryptography.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Logo.png" Path="[|AI_PROPPATH_DIR_PERBUILD_Logo.png]\[|AI_PROPPATH_FILENAME_PERBUILD_Logo.png]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.DotNet.PlatformAbstractions.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.DotNet.PlatformAbstractions.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.DotNet.PlatformAbstractions.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.DependencyInjection.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.DependencyInjection.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyInjection.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.DependencyModel.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.DependencyModel.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyModel.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.Logging.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Logging.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Logging.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.Options.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Options.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Options.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.Primitives.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Primitives.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Primitives.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Xaml.Behaviors.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Xaml.Behaviors.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_NLog.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_NLog.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_NLog.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Newtonsoft.Json.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_Notification.Wpf.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Notification.Wpf.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Notification.Wpf.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_PlantX.deps.json" Path="[|AI_PROPPATH_DIR_PERBUILD_PlantX.deps.json]\[|AI_PROPPATH_FILENAME_PERBUILD_PlantX.deps.json]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_PlantX.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_PlantX.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_PlantX.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_PlantX.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_PlantX.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_PlantX.exe]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_PlantX.runtimeconfig.json" Path="[|AI_PROPPATH_DIR_PERBUILD_PlantX.runtimeconfig.json]\[|AI_PROPPATH_FILENAME_PERBUILD_PlantX.runtimeconfig.json]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.barcodes.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.barcodes.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.barcodes.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.bouncycastleadapter.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.bouncycastleadapter.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.bouncycastleadapter.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.bouncycastleconnector.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.bouncycastleconnector.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.bouncycastleconnector.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.commons.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.commons.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.commons.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.forms.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.forms.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.forms.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.io.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.io.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.io.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.kernel.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.kernel.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.kernel.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.layout.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.layout.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.layout.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.pdfa.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.pdfa.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.pdfa.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.pdfua.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.pdfua.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.pdfua.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.sign.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.sign.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.sign.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.styledxmlparser.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.styledxmlparser.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.styledxmlparser.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_itext.svg.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_itext.svg.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_itext.svg.dll]" Type="2" Content="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
     <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>
@@ -121,6 +225,7 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
     <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
@@ -142,9 +247,8 @@
     <ROW Feature_="MainFeature" Component_="ProductInformation"/>
     <ROW Feature_="MainFeature" Component_="PlantX_PrimaryOutput"/>
     <ROW Feature_="MainFeature" Component_="PlantX_PublishOutput"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
-    <ROW Name="AI_PROPPATH_FILENAME_PERBUILD_PlantX.exe" SourcePath="..\..\..\..\Desktop\PlantX\Logo.ico" Index="0"/>
+    <ROW Feature_="MainFeature" Component_="PlantX_PublishOutput_PDF"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
@@ -176,7 +280,8 @@
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="AI_PROPPATH_FILENAME_PERBUILD_Plant" Directory_="DesktopFolder" Name="[|AI_PROPPATH_FILENAME_PERBUILD_PlantX.exe]" Component_="PlantX_PublishOutput" Target="[#PlantX.exe]" Hotkey="0" Icon_="AI_PROPPATH_FILENAME_PERBUILD_PlantX.exe" IconIndex="0" ShowCmd="1" WkDir="PlantX_Dir"/>
+    <ROW Shortcut="AI_PROPPATH_FILENAME_PERBUILD_Pla_1" Directory_="DesktopFolder" Name="[|AI_PROPPATH_FILENAME_PERBUILD_PlantX.exe]" Component_="PlantX_PublishOutput" Target="[#PlantX.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="PlantX_Dir"/>
+    <ROW Shortcut="AI_PROPPATH_FILENAME_PERBUILD_Plant" Directory_="SHORTCUTDIR" Name="[|AI_PROPPATH_FILENAME_PERBUILD_PlantX.exe]" Component_="PlantX_PublishOutput" Target="[#PlantX.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="DesktopFolder"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>
@@ -186,11 +291,36 @@
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.VsProjectComponent">
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="BouncyCastle.Cryptography.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.barcodes.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.bouncycastleadapter.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.bouncycastleconnector.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.commons.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.forms.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.io.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.kernel.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.layout.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.pdfa.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.pdfua.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.sign.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.styledxmlparser.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="itext.svg.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="Microsoft.DotNet.PlatformAbstractions.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.DependencyInjection.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.DependencyModel.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.Logging.Abstractions.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.Logging.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.Options.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.Primitives.dll"/>
     <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="Microsoft.Xaml.Behaviors.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="Newtonsoft.Json.dll"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="NLog.dll"/>
     <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="Notification.Wpf.dll"/>
     <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="PlantX.deps.json"/>
     <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="PlantX.dll"/>
     <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="PlantX.exe"/>
     <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="PlantX.runtimeconfig.json"/>
+    <ROW ProjectId="{e30a4583-ad7a-4872-ba85-90621bcbfe39}" ProjectName="PlantX" OutputGroup="PublishOutput" OutputFile="Logo.png"/>
   </COMPONENT>
 </DOCUMENT>

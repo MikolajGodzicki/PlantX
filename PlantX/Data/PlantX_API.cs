@@ -36,11 +36,19 @@ namespace PlantX.Data {
 			}
 
 			foreach (string file in files) {
-				string filePath = Path.Combine(fulldataPath, file);
-				if (!File.Exists(filePath)) {
-					File.Create(filePath);
+				string filePath = Path.Combine(fulldataPath, file); 
+				using (FileStream fileStream = new FileStream(filePath, FileMode.Append, FileAccess.Write, FileShare.Read)) {
+					using (StreamWriter writer = new StreamWriter(file)) {
+						writer.WriteLine();
+					}
 				}
 			}
+
+			InitializeData();
+		}
+
+		public static void InitializeData() {
+			string fulldataPath = GetFullPath();
 
 			AvailablePlants = GetFileCollection<Plant>(File.ReadAllText(Path.Combine(fulldataPath, files[0])));
 			AvailablePesticides = GetFileCollection<Pesticide>(File.ReadAllText(Path.Combine(fulldataPath, files[1])));
