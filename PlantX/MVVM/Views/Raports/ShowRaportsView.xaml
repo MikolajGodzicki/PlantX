@@ -16,12 +16,14 @@
             <RowDefinition Height="70" />
         </Grid.RowDefinitions>
 
-        <TextBlock Margin="16"
-                   FontSize="20"
-                   FontWeight="Bold"
-                   FontFamily="/Fonts/#Inter">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="16"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       FontFamily="/Fonts/#Inter">
                 Wszystkie raporty
-        </TextBlock>
+            </TextBlock>
+        </StackPanel>
         <Border BorderThickness="2"
                 BorderBrush="#E0E0E0"
                 CornerRadius="5"
