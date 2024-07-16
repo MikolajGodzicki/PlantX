@@ -52,6 +52,11 @@ namespace PlantX.MVVM.ViewModels.Plants {
 		}
 
 		private void ChangePlant() {
+			if (SelectedPlant is null) {
+				NotificationsManager.ShowError(Locale_PL.Plant_WrongIndex);
+				return;
+			}
+
 			Plant? plantToEdit = PlantX_API.GetPlantById(SelectedPlant.Id);
 
 			if (plantToEdit is null) {

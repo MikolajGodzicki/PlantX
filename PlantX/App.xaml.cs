@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using Microsoft.Extensions.Logging;
+using NLog;
+using System.IO;
+using System.Windows;
 
 namespace PlantX {
 	/// <summary>

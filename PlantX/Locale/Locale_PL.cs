@@ -6,6 +6,7 @@
 		public const string Pesticide_WeightGreaterThanZero = "Moc musi być większa od 0.";
 		public const string Pesticide_Created = "Utworzono pestycyd.";
 		public const string Pesticide_Edited = "Zmieniono pestycyd.";
+		public const string Pesticide_WrongIndex = "Wybrano złą pozycje.";
 
 		public const string Field_NameRequired = "Podaj nazwę obszaru polnego.";
 		public const string Field_Exists = "Obszar polny o tej nazwie już istnieje.";
@@ -13,12 +14,14 @@
 		public const string Field_AreaGreaterThanZero = "Powierzchnia musi być większa od 0.";
 		public const string Field_Created = "Utworzono obszar polny.";
 		public const string Field_Edited = "Zmieniono obszar polny.";
+		public const string Field_WrongIndex = "Wybrano złą pozycje.";
 
 		public const string Plant_NameRequired = "Podaj nazwę rośliny.";
 		public const string Plant_Exists = "Roślina o tej nazwie już istnieje.";
 		public const string Plant_NotExists = "Roślina o tej nazwie nie istnieje.";
 		public const string Plant_Created = "Utworzono roślinę.";
 		public const string Plant_Edited = "Zmieniono roślinę.";
+		public const string Plant_WrongIndex = "Wybrano złą pozycje.";
 
 		public const string Raport_WrongIndex = "Wybrano złą pozycje.";
 		public const string Raport_PesticideExists = "Nie możesz dodać tego samego pestycydu.";

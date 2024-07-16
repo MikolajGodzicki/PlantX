@@ -63,6 +63,11 @@ namespace PlantX.MVVM.ViewModels.Fields {
 		}
 
 		private void ChangeField() {
+			if (SelectedField is null) {
+				NotificationsManager.ShowError(Locale_PL.Field_WrongIndex);
+				return;
+			}
+
 			Field? fieldToEdit = PlantX_API.GetFieldById(SelectedField.Id);
 
 			if (fieldToEdit is null) {
