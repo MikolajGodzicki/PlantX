@@ -3,6 +3,7 @@ using PlantX.MVVM.Models.Fields;
 using PlantX.MVVM.Models.Pesticides;
 using PlantX.MVVM.Models.Plants;
 using PlantX.MVVM.Models.Raports;
+using PlantX.Utils;
 using System.Collections.ObjectModel;
 using System.IO;
 
@@ -16,6 +17,22 @@ namespace PlantX.Data {
 		public static ObservableCollection<Field> AvailableFields = default!;
 
 		public static ObservableCollection<Raport> Raports = default!;
+
+		public static ObservableCollection<Month> Months = new ObservableCollection<Month>() {
+				new Month("Wszystkie", 0),
+				new Month("Styczeń", 1),
+				new Month("Luty", 2),
+				new Month("Marzec", 3),
+				new Month("Kwiecień", 4),
+				new Month("Maj", 5),
+				new Month("Czerwiec", 6),
+				new Month("Lipiec", 7),
+				new Month("Sierpień", 8),
+				new Month("Wrzesień", 9),
+				new Month("Październik", 10),
+				new Month("Listopad", 11),
+				new Month("Grudzień", 12)
+			};
 
 		public static Field? GetFieldById(Guid ID) {
 			return AvailableFields.FirstOrDefault(e => e.Id == ID);

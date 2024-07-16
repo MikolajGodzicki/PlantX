@@ -1,11 +1,15 @@
 ﻿using PlantX.Data;
 using PlantX.Locale;
 using PlantX.MVVM.Models.Pesticides;
+using PlantX.MVVM.Models.Plants;
 using PlantX.MVVM.Models.Raports;
+using PlantX.MVVM.Views.Plants;
 using PlantX.Notifications;
 using PlantX.PDF;
 using PlantX.Utils;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Windows.Data;
 
 namespace PlantX.MVVM.ViewModels.Raports {
 	class ShowRaportsViewModel : NotifyPropertyBase {
@@ -17,6 +21,9 @@ namespace PlantX.MVVM.ViewModels.Raports {
 				OnPropertyChanged();
 			}
 		}
+
+		public ICollectionView RaportsView { get; set; }
+
 
 		private Raport selectedRaport;
 
@@ -40,6 +47,19 @@ namespace PlantX.MVVM.ViewModels.Raports {
 			}
 		}
 
+		public ObservableCollection<Month> Months { get => PlantX_API.Months; }
+
+		private Month selectedMonth;
+
+		public Month SelectedMonth {
+			get => selectedMonth;
+			set {
+				selectedMonth = value;
+				OnPropertyChanged();
+				CollectionViewSource.GetDefaultView(AvailableRaports).Refresh();
+			}
+		}
+
 		public RelayCommand RemoveRaportCommand { get; set; }
 		public RelayCommand CreatePDFCommand { get; set; }
 
@@ -47,6 +67,7 @@ namespace PlantX.MVVM.ViewModels.Raports {
 
 		public ShowRaportsViewModel() {
 			AvailableRaports = PlantX_API.Raports;
+			SelectedMonth = Months.First();
 
 			pDFCreator = new PDFCreator();
 
@@ -57,6 +78,20 @@ namespace PlantX.MVVM.ViewModels.Raports {
 			CreatePDFCommand = new RelayCommand(e => {
 				CreatePDF();
 			});
+
+
+			RaportsView = CollectionViewSource.GetDefaultView(AvailableRaports);
+			RaportsView.Filter = FilterRaports;
+		}
+
+		private bool FilterRaports(object obj) {
+			if (obj is Raport raport && SelectedMonth is not null) {
+				if (SelectedMonth.Number == 0) {
+					return true;
+				}
+				return raport.CreationDate.Month == SelectedMonth.Number;
+			}
+			return false;
 		}
 
 		private void UpdateRaportPesticides(ObservableCollection<PesticideAreaRelation> pesticides) {
