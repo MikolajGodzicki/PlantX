@@ -27,17 +27,6 @@
         <StackPanel Orientation="Horizontal"
                     Grid.Row="1">
             <StackPanel Orientation="Vertical">
-                <controls:FormInputControl Width="400"
-                                           Height="40"
-                                           VerticalContentAlignment="Center"
-                                           HorizontalAlignment="Left"
-                                           Margin="30,35,5,30"
-                                           Placeholder="Wyszukaj raport"
-                                           Style="{DynamicResource FormInput}"
-                                           Text="{Binding SearchingText, UpdateSourceTrigger=PropertyChanged}" />
-            </StackPanel>
-
-            <StackPanel Orientation="Vertical">
 
                 <TextBlock Text="Filtruj po miesiącu:"
                            Margin="30,5,5,10"

@@ -47,9 +47,6 @@ namespace PlantX.MVVM.ViewModels.Raports {
 			}
 		}
 
-		private string searchingText { get; set; }
-		public string SearchingText { get; set; }
-
 		public ObservableCollection<Month> Months { get => PlantX_API.Months; }
 
 		private Month selectedMonth;
@@ -92,8 +89,9 @@ namespace PlantX.MVVM.ViewModels.Raports {
 				if (SelectedMonth.Number == 0) {
 					return true;
 				}
-				return raport.CreationDate.Month == SelectedMonth.Number;
+                return raport.CreationDate.Month == SelectedMonth.Number;
 			}
+
 			return false;
 		}
 
