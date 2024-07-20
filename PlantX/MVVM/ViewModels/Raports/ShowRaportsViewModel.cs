@@ -47,6 +47,9 @@ namespace PlantX.MVVM.ViewModels.Raports {
 			}
 		}
 
+		private string searchingText { get; set; }
+		public string SearchingText { get; set; }
+
 		public ObservableCollection<Month> Months { get => PlantX_API.Months; }
 
 		private Month selectedMonth;
